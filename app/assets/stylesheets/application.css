@@ -1,41 +1,380 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
- .navbar {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    color: #438e29;
-    font-family: sans-serif;
-    border-bottom: 1px solid gray;
-    padding: 16px;
-    margin: 0;
-    width: 100%;
- }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: "Proxima", Arial, Helvetica, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
  a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
     text-decoration: none;
     color: #438e29;
-    padding: 0px 16px;
+}
+
+/* .homepage{
+    display:flex;
+    flex-direction: column;
+} */
+
+.mainnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    color: #438e29;
+    border-bottom: 1px solid lightgrey;
+    align-items: center;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.leftnav > ul {
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.rightnav > ul {
+    list-style-type: none;
     font-size: 16px;
 }
 
-.header {
-    font-weight: bold;
+
+.titleimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    background-color: #f9fafb;
+    background-image: url(https://i.imgur.com/5SZRejd.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:#242A30;
+}
+
+.title {
+    font-size: 48px;
+    margin: 0px 0px 16px;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+}
+
+.subtitle {
+    font-size: 24px;
+    color:#242A30;
+    -webkit-font-smoothing: antialiased;
+}
+
+.howitworks {
+    color:#242A30; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9fafb;
+    height: 530px;
+    padding: 48px 0px;
+    margin: 0px 0px 40px;
+    font-size: 40px;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+.howitworkslist {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 15px;
+    list-style-position: inside;
+    width: 100%;
+}
+
+.howitworkslist > li {
+    padding: 24px 24px 24px 24px;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    width: 33%;
+}
+
+
+.howitworkslist > li > div{
+    padding-top: 24px;
+}
+
+.howitworksimg {
+    width: 180px;
+    text-align: center;
+}
+
+.howitworksdesc {
+    text-align: left;
+    line-height: 1.5;
+}
+.howitworkstitle {
+    font-size: 24px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bookonapp {
+    height: 525px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cellphone {
+    height: 400px;
+    width: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.appgoogle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-left: 40px;
+}
+.googleimg {
+    height: 60px;
+    width: 202px;
+    padding-right: 30px;
+}
+
+.appimg {
+    height: 60px;
+    width: 173px;
+}
+
+.bookonapptext {
+    margin-bottom: 40px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
     font-size: 20px;
+    background: #67727E;
+    padding: 32px 180px 32px 180px;
+    height: 350px;
+    color: #B1B9C3;
+}
+
+.footerlist {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    padding-top: 20px;
+}
+
+.footergoogleimg {
+    width: 152px;
+    height: 45px;
+    padding-right: 60px;
+}
+
+.footerappimg {
+    width: 130px;
+    height: 45px;
+}
+
+.footerimg {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.list {
+    color: #ffffff;
+}
+
+.footertext {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.footericonsdesc {
+    display: flex;
+}
+.footericons {
+    width: 140px;
+    height: 24px;
+}
+
+.loginsignup {
+    background-image: url(https://s3-us-west-2.amazonaws.com/com.uppercut.hero-images/assets/0405/comps/405_01941.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 740px;
+    text-align: center;
+    position: relative;
+}
+
+.loginsignupform {
+    background: white;
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    right: 450px;
+    top: 50px;
+    border-radius: 5px;
+}
+.loginsignuplist {
+    display: flex;
+    justify-content: center;
+}
+
+.loginsignuplist > button {
+    padding: 15px;
+    background-color: #ffffff;
+    margin: 25px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 200px;
+    color: #438e29;
+}
+
+.loginsignuplist > button:hover {
+    color: #ffffff;
+    background-color: #51af33;
+}
+
+.loginsignupheader {
+    font-size: 35px;
+    font-weight: bold;
+     color: #438e29;
+     padding: 10px 0px;
+}
+
+.socialmedia > button {
+    width: 420px;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.facebook {
+    background: #3B5998;
+}
+
+.google {
+    background: #D73D32;
+}
+
+.loginsignuptext {
+    font-size: 14px;
+}
+
+.signupform {
+    background: white;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    right: 500px;
+    top: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.signupform > label {
+    font-size: 14px;
+    color: #86919D;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px; 
+}
+
+.signuplabel input[type="text"] {
+    height: 30px;
+    border: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.signuplabel input[type="password"] {
+    height: 30px;
+    border: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.signuplabel input[type="number"] {
+    height: 30px;
+    border: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.signupform > p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 15px;
+}
+.signupform > ul {
+    color: #d14200;
+    font-size: 0.87rem;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.signupform input[type="submit"] {
+    background: #51af33;
+    color: white;
+    height: 40px;
+    border: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    font-size: 19px;
+    margin: 0px 15px;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
 }
