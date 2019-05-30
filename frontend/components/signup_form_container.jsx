@@ -41,43 +41,51 @@ class Signup extends React.Component {
 
     errors() {
         if (this.props.errors) {
-            return Object.values(this.props.errors).map((error, i) => <li key={i}>{error}</li>)
+            return Object.values(this.props.errors).map((error, i) => {
+                <li key={i}>{error}</li> })
         }
     }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <h1>Tasker</h1>
-                <label>First Name
+            <div className="loginsignup">
+            <form  className="signupform" onSubmit={this.handleSubmit}>
+                    <h1 className="loginsignupheader">Tasker</h1>
+                <label className="signuplabel">First Name
                 <input type="text"
-                        value={this.state.first_name}
-                        onChange={this.update('first_name')} />
-                </label>
-                <label>Last Name
+                value={this.state.first_name}
+                onChange={this.update('first_name')}/></label>
+
+           
+                <label className="signuplabel">Last Name
                 <input type="text"
-                        value={this.state.last_name}
-                        onChange={this.update('last_name')} />
+                            value={this.state.last_name}
+                            onChange={this.update('last_name')} />
                 </label>
-                <label>Email Address
-                <input type="text"
-                        value={this.state.email}
-                        onChange={this.update('email')} />
+        
+                
+                <label className="signuplabel">Email Address 
+                     <input type="text"
+                            value={this.state.email}
+                            onChange={this.update('email')} />
                 </label>
-                <label>Password
-                <input type="password"
-                        value={this.state.password}
-                        onChange={this.update('password')} />
+                <label className="signuplabel">Password
+                        <input type="password"
+                            value={this.state.password}
+                            onChange={this.update('password')} />
                 </label>
-                <label>Zipcode
-                <input type="number"
-                        value={this.state.zipcode}
-                        onChange={this.update('zipcode')} />
+                <label className="signuplabel">Zipcode
+                    <input type="number"
+                            value={this.state.zipcode}
+                            onChange={this.update('zipcode')} />
                 </label>
-                <ul>{this.errors()}</ul>
+                
+                
+                    <ul>{this.errors()}</ul>
                 <p>By clicking below and creating an account, I agree to TaskRabbit's Terms of Service and Privacy Policy.</p>
                 <input type="submit" value="Create account" />
             </form>
+            </div>
         )
     }
 
