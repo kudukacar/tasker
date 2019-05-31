@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { logout } from '../actions/session_actions';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -21,12 +22,29 @@ const Account = (props) => {
         if(props.user) {
             return (
                 <div>
-                    <h1>Account</h1>
-                    <ul>
-                        <li>{props.user.first_name} {props.user.last_name}</li>
-                        <li>{props.user.email}</li>
-                        <li><button onClick={props.logout}>Log Out</button></li>
-                    </ul>
+                    <header className="mainnav">
+                        <nav className="leftnav">
+                            <ul>
+                                <li>Tasker</li>
+                            </ul>
+                        </nav>
+                        <nav className="rightnav">
+                            <ul>
+                                <li><Link to='/account'>Account</Link></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <main className="accountformcontainer">
+                        <section>
+                            <h3>Account</h3>
+                            <ul>
+                                <li><i className="fas fa-user"></i>{props.user.first_name} {props.user.last_name}</li>
+                                <li><i class="far fa-envelope"></i>{props.user.email}</li>
+                                <li><i class="fas fa-map-marker-alt"></i>{props.user.zipcode}</li>
+                                <li><button onClick={props.logout}>Log Out</button></li>
+                            </ul>
+                        </section>
+                    </main>
                 </div>
             )
         } 

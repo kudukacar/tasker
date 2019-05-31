@@ -33,22 +33,25 @@ class Signup extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        this.props.signup(this.state).then(() => this.props.history.push('/account'));
+        this.props.signup(this.state).then(() => this.props.history.push('/'));
     }
     update(field) {
         return e => this.setState({ [field]: e.target.value })
     }
 
     errors() {
-        if (this.props.errors) {
-            return Object.values(this.props.errors).map((error, i) => {
-                <li key={i}>{error}</li> })
+        if (this.props.errors.session) {
+            return (
+                <ul>
+                    {Object.values(this.props.errors.session).map((error,i) => <li key={i}>{error}</li>)}
+                </ul>
+            )
         }
     }
 
     render() {
         return (
-            <div className="loginsignup">
+            <div className="signupformtemplate">
             <form  className="signupform" onSubmit={this.handleSubmit}>
                     <h1 className="loginsignupheader">Tasker</h1>
                 <label className="signuplabel">First Name
@@ -81,7 +84,7 @@ class Signup extends React.Component {
                 </label>
                 
                 
-                    <ul>{this.errors()}</ul>
+                    <div>{this.errors()}</div>
                 <p>By clicking below and creating an account, I agree to TaskRabbit's Terms of Service and Privacy Policy.</p>
                 <input type="submit" value="Create account" />
             </form>

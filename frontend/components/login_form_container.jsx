@@ -36,15 +36,20 @@ class Login extends React.Component {
     }
 
     errors() {
-        if (this.props.errors) {
-            return Object.values(this.props.errors).map((error, i) => <li key={i}>{error}</li>)
+        if (this.props.errors.session) {
+            return (
+                <ul>
+                    {Object.values(this.props.errors.session).map((error, i) => <li key={i}>{error}</li>)}
+                </ul>
+            )
         }
     }
 
     render() {
         return (
-        <form onSubmit={this.handleSubmit}>
-            <h1>Tasker</h1>
+        <div className="loginsignup">
+        <form className="loginform" onSubmit={this.handleSubmit}>
+            <h1 className="loginsignupheader">Tasker</h1>
             <label>Email Address
                 <input type="text" 
                 value={this.state.email}
@@ -55,9 +60,11 @@ class Login extends React.Component {
                     value={this.state.password}
                     onChange={this.update('password')} />
             </label>
-            <ul>{this.errors()}</ul>
+            <div>{this.errors()}</div>
             <input type="submit"  value="Log in"/>
+            <span className="loginformtext">Forgot password?</span>
         </form>
+        </div>
         )
     }
 

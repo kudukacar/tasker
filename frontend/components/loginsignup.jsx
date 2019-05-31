@@ -10,7 +10,9 @@ const Loginsignup = () => (
         <button className="facebook">Facebook</button>
         <button className="google">Google</button>
         </div>
+        <br/>
         <p>or</p>
+        <br/>
         <br/>
         <span>
             Log in or sign up with email
