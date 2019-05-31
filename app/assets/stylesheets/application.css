@@ -60,7 +60,6 @@ table {
     justify-content: space-between;
     padding: 20px 20px;
     color: #438e29;
-    border-bottom: 1px solid lightgrey;
     align-items: center;
     margin-left: 160px;
     margin-right: 160px;
@@ -90,6 +89,7 @@ table {
     background-repeat: no-repeat;
     text-align: center;
     color:#242A30;
+    border-top: 1px solid lightgrey;
 }
 
 .title {
@@ -265,13 +265,16 @@ table {
 }
 
 .loginsignuplist > button {
-    padding: 15px;
+    padding: 10px 15px;
     background-color: #ffffff;
-    margin: 25px 10px;
+    margin: 20px 15px;
     border-radius: 5px;
     font-size: 20px;
     width: 200px;
+    color: none;
     color: #438e29;
+    border:none;
+    border: 1px solid #438e29;
 }
 
 .loginsignuplist > button:hover {
@@ -283,14 +286,15 @@ table {
     font-size: 35px;
     font-weight: bold;
      color: #438e29;
-     padding: 10px 0px;
+     padding: 20px 0px;
+     text-align: center;
 }
 
 .socialmedia > button {
-    width: 420px;
+    width: 425px;
     border-radius: 5px;
     color: #ffffff;
-    padding: 15px;
+    padding: 10px;
     font-size: 20px;
     margin: 10px;
 }
@@ -307,10 +311,20 @@ table {
     font-size: 14px;
 }
 
+.signupformtemplate{
+    display: flex;
+    justify-content: center;
+    background-image: url(https://s3-us-west-2.amazonaws.com/com.uppercut.hero-images/assets/0405/comps/405_01941.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 740px;
+    
+}
+
 .signupform {
     background: white;
-    width: 400px;
-    height: 600px;
+    width: 450px;
+    height: 650px;
     position: absolute;
     right: 500px;
     top: 30px;
@@ -318,7 +332,7 @@ table {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .signupform > label {
@@ -331,27 +345,33 @@ table {
 }
 
 .signuplabel input[type="text"] {
-    height: 30px;
+    height: 40px;
     border: none;
     border: solid 1px lightgray;
     border-radius: 5px;
     margin-top: 10px;
+    padding: 0px 10px;
+    font-size: 16px;
 }
 
 .signuplabel input[type="password"] {
-    height: 30px;
+    height: 40px;
     border: none;
     border: solid 1px lightgray;
     border-radius: 5px;
     margin-top: 10px;
+    padding: 0px 10px;
+    font-size: 16px;
 }
 
 .signuplabel input[type="number"] {
-    height: 30px;
+    height: 40px;
     border: none;
     border: solid 1px lightgray;
     border-radius: 5px;
     margin-top: 10px;
+    padding: 0px 10px;
+    font-size: 16px;
 }
 .signupform > p {
     font-size: 16px;
@@ -359,11 +379,15 @@ table {
     text-align: left;
     padding-left: 15px;
 }
-.signupform > ul {
+.signupform > div {
     color: #d14200;
     font-size: 0.87rem;
     line-height: 1.5;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    line-height: 1.5;
 }
 
 .signupform input[type="submit"] {
@@ -374,7 +398,179 @@ table {
     border: solid 1px lightgray;
     border-radius: 5px;
     font-size: 19px;
-    margin: 0px 15px;
+    margin: 0px 15px 10px 15px;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
+}
+
+.loginform {
+    background: white;
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    right: 450px;
+    top: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginform > label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #86919D;
+    text-align: left;
+    padding: 0px 30px; 
+}
+
+.loginform input[type="submit"] {
+    background: #51af33;
+    color: white;
+    height: 45px;
+    border: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    font-size: 19px;
+    margin: 15px 25px 10px 25px;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+}
+
+.loginform > label input[type="password"] {
+    height: 40px;
+    border: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    font-size: 16px;
+}
+
+.loginform > label input[type="text"] {
+    height: 40px;
+    border: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    font-size: 16px;
+}
+
+.loginformtext {
+    font-size: 16px;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 15px;
+    color:#438e29;
+}
+
+.loginform > div {
+    color: #d14200;
+    font-size: 0.87rem;
+    line-height: 1.5;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    line-height: 1.5;
+}
+
+.loggedintitle {
+    font-size: 32px;
+    margin: 0px 0px 16px;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+}
+
+.loggedinsubtitle {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9fafb;
+    text-align: left;
+    color:#242A30;
+     -webkit-font-smoothing: antialiased;
+}
+
+.loggedinsubtitle > div {
+    font-size: 24px;
+    padding: 40px 100px 0px 100px;
+}
+
+.loggedinsubtitle > span {
+    font-size: 20px;
+    padding: 40px 100px 50px 100px;
+}
+
+.accountformcontainer {
+    height: 740px;
+    color:#242A30;
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9fafb;
+}
+
+.accountformcontainer > section {
+    margin: 80px;
+    height: 350px;
+    width: 750px;
+    border: 1px solid lightgray;
+    background: #ffffff;
+
+}
+
+.accountformcontainer > section > h3 {
+    font-size: 28px;
+    border-bottom: 1px solid lightgray;
+    margin: 20px 10px 10px 10px;
+    padding-bottom: 10px;
+}
+
+.accountformcontainer > section > ul {
+    font-size: 20px;
+    text-align: left;
+    line-height: 2.0;
+    padding: 10px 0px 20px 280px;
+}
+
+.accountformcontainer > section > ul > li > button {
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.fas.fa-user {
+    padding-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.far.fa-envelope {
+    padding-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.fas.fa-map-marker-alt {
+    padding-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.fab.fa-facebook-square {
+    padding: 0px 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.fab.fa-twitter {
+    padding-right: 5px;
+    width: 20px;
+    height: 20px;
 }

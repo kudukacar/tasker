@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     validates :password_digest, :session_token, :first_name, :last_name, presence: true
     validates :email, uniqueness: true, presence: true 
-    validates :email, format: {with: URI::MailTo::EMAIL_REGEXP, message: 'Must be a valid email address.' }
+    validates :email, format: {with: URI::MailTo::EMAIL_REGEXP, message: 'Must be a valid email address' }
     validates :zipcode, presence: true, numericality: { only_integer: true }
     validates :password, length: {minimum: 6}, allow_nil: true 
     validates :tasker, inclusion: { in: [true, false]}
