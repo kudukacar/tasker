@@ -11,11 +11,11 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
     <div>
         <Switch>
+            <Route exact path='/' component={Navbar} />
             <AuthRoute exact path="/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/signup" component={SignupFormContainer}/>
+            <AuthRoute exact path='/loginsignup' component={Loginsignup} />
             <ProtectedRoute exact path='/account' component={Account}/>
-            <Route exact path='/loginsignup' component={Loginsignup}/>
-            <Route exact path='/' component={Navbar} />
         </Switch>
     </div>
 );

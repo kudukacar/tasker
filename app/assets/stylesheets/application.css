@@ -113,7 +113,7 @@ table {
     text-align: center;
     background-color: #f9fafb;
     height: 530px;
-    padding: 48px 0px;
+    padding: 48px 70px;
     margin: 0px 0px 40px;
     font-size: 40px;
     -webkit-font-smoothing: antialiased;
@@ -133,6 +133,7 @@ table {
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     width: 33%;
+    margin: 0px 20px;
 }
 
 
@@ -193,6 +194,10 @@ table {
     margin-bottom: 70px;
     margin-top: 40px;
     cursor: pointer;
+}
+
+.loginsignupform > button:hover {
+    background: #438e29;
 }
 .loginsignuplist {
     display: flex;

@@ -13,7 +13,13 @@ const mapDispatchToProps = dispatch => {
 
 class Loginsignup extends React.Component {
 
-    logindemouser() {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
         const user = {email:"demouser@gmail.com", password:"demosuser"}
         this.props.login(user);
     }
@@ -23,7 +29,7 @@ class Loginsignup extends React.Component {
     <div className="loginsignup">
         <form className="loginsignupform">
         <h1 className="loginsignupheader">Tasker</h1>
-        <button onClick={this.logindemouser()}>Demo User</button>
+        <button onClick={this.handleClick}>Demo User</button>
         <br></br>
         <span>
             Log in or sign up with email
