@@ -37,43 +37,7 @@ const Navbar = (props) => {
                 </section>
                     <footer className="footer">
                         <div className="footericonsdesc">
-                            <div>Follow us! We're friendly: <i class="fab fa-facebook-square"></i> | <i class="fab fa-twitter"></i> | <i class="fab fa-instagram"></i></div>
-                        </div>
-                        <div className="footerlist">
-                            <div>
-                                Discover
-                            <ul className="list">
-                                    <li>Become a Tasker</li>
-                                    <li>Services By City</li>
-                                    <li>All Services</li>
-                                    <li>Buy a Gift Card</li>
-                                    <li>Elite Taskers</li>
-                                    <li>Help</li>
-                                </ul>
-                            </div>
-                            <div>
-                                Company
-                            <ul className="list">
-                                    <li>About Us</li>
-                                    <li>Careers</li>
-                                    <li>Press</li>
-                                    <li>TaskRabbit for Good</li>
-                                    <li>Blog</li>
-                                    <li>Terms &amp; Privacy</li>
-                                </ul>
-                            </div>
-                            <div>
-                                Download our app
-                            <div className="footertext">Tackle your to-do list wherever you are with our mobile
-                                <br />
-                                    app.</div>
-                                <div className="footerimg">
-                                    <img className="footergoogleimg" src="https://assets.taskrabbit.com/v3/assets/web/en-US/appstore_badge-c5ba3272b7b251f00741ef3ea61e4d75.svg" />
-                                    <img className="footerappimg" src="https://assets.taskrabbit.com/v3/assets/web/en-US/google_play_badge-68fa64ae2af9dc05624d3d3d35691d2a.svg" />
-
-                                </div>
-                            </div>
-
+                            <div>Follow us! We're friendly: <i className="fab fa-github-square"></i> | <i className="fab fa-linkedin"></i></div>
                         </div>
                     </footer>
             </main>
@@ -133,57 +97,9 @@ const Navbar = (props) => {
                         </li>
                     </ol>
                 </section>
-                <section className="bookonapp">
-                        <img className="cellphone" src="https://i0.wp.com/blog.taskrabbit.com/wp-content/uploads/2016/03/silver-iphone_splash.png?resize=458%2C903&ssl=1"/>
-                    <div className="appgoogle">
-                        <div className="bookonapptext">
-                            Easily book and manage tasks in our app
-                        </div>
-                        <div >
-                             <img className="googleimg" src="https://assets.taskrabbit.com/v3/assets/web/en-US/appstore_badge-c5ba3272b7b251f00741ef3ea61e4d75.svg"/>
-                             <img className="appimg" src="https://assets.taskrabbit.com/v3/assets/web/en-US/google_play_badge-68fa64ae2af9dc05624d3d3d35691d2a.svg"/>
-                        </div>
-                    </div>
-                </section>
                 <footer className="footer">
                     <div className="footericonsdesc">
-                            <div>Follow us! We're friendly: <i class="fab fa-facebook-square"></i> | <i class="fab fa-twitter"></i> | <i class="fab fa-instagram"></i></div>
-                    </div>
-                    <div className="footerlist">
-                        <div>
-                            Discover
-                            <ul className="list">
-                                <li>Become a Tasker</li>
-                                <li>Services By City</li>
-                                <li>All Services</li>
-                                <li>Buy a Gift Card</li>
-                                <li>Elite Taskers</li>
-                                <li>Help</li>
-                            </ul>
-                        </div>
-                        <div>
-                            Company
-                            <ul className="list">
-                                <li>About Us</li>
-                                <li>Careers</li>
-                                <li>Press</li>
-                                <li>TaskRabbit for Good</li>
-                                <li>Blog</li>
-                                <li>Terms &amp; Privacy</li>
-                            </ul>
-                        </div>
-                        <div>
-                            Download our app
-                            <div className="footertext">Tackle your to-do list wherever you are with our mobile 
-                                <br/>
-                                app.</div>
-                            <div className="footerimg">
-                                <img className="footergoogleimg" src="https://assets.taskrabbit.com/v3/assets/web/en-US/appstore_badge-c5ba3272b7b251f00741ef3ea61e4d75.svg" />
-                                <img className="footerappimg" src="https://assets.taskrabbit.com/v3/assets/web/en-US/google_play_badge-68fa64ae2af9dc05624d3d3d35691d2a.svg" />
-
-                            </div>
-                        </div>
-
+                            <div>Follow us! We're friendly: <i className="fab fa-github-square"></i> | <i className="fab fa-linkedin"></i></div>
                     </div>
                 </footer>
             </main>

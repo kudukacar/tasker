@@ -39,8 +39,8 @@ const Account = (props) => {
                             <h3>Account</h3>
                             <ul>
                                 <li><i className="fas fa-user"></i>{props.user.first_name} {props.user.last_name}</li>
-                                <li><i class="far fa-envelope"></i>{props.user.email}</li>
-                                <li><i class="fas fa-map-marker-alt"></i>{props.user.zipcode}</li>
+                                <li><i className="far fa-envelope"></i>{props.user.email}</li>
+                                <li><i className="fas fa-map-marker-alt"></i>{props.user.zipcode}</li>
                                 <li><button onClick={props.logout}>Log Out</button></li>
                             </ul>
                         </section>
