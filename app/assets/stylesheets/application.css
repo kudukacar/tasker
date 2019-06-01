@@ -154,43 +154,6 @@ table {
     -webkit-font-smoothing: antialiased;
 }
 
-.bookonapp {
-    height: 525px;
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    -webkit-font-smoothing: antialiased;
-}
-
-.cellphone {
-    height: 400px;
-    width: 250px;
-    object-fit: cover;
-    object-position: top;
-}
-
-.appgoogle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding-left: 40px;
-}
-.googleimg {
-    height: 60px;
-    width: 202px;
-    padding-right: 30px;
-}
-
-.appimg {
-    height: 60px;
-    width: 173px;
-}
-
-.bookonapptext {
-    margin-bottom: 40px;
-}
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -199,46 +162,6 @@ table {
     padding: 32px 180px 32px 180px;
     height: 350px;
     color: #B1B9C3;
-}
-
-.footerlist {
-    display: flex;
-    justify-content: space-between;
-    line-height: 1.5;
-    padding-top: 20px;
-}
-
-.footergoogleimg {
-    width: 152px;
-    height: 45px;
-    padding-right: 60px;
-}
-
-.footerappimg {
-    width: 130px;
-    height: 45px;
-}
-
-.footerimg {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.list {
-    color: #ffffff;
-}
-
-.footertext {
-    color: #ffffff;
-    font-size: 16px;
-}
-
-.footericonsdesc {
-    display: flex;
-}
-.footericons {
-    width: 140px;
-    height: 24px;
 }
 
 .loginsignup {
@@ -259,12 +182,24 @@ table {
     top: 50px;
     border-radius: 5px;
 }
+
+.loginsignupform > button {
+    background: #51af33;
+    width: 440px;
+    height: 50px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    cursor: pointer;
+}
 .loginsignuplist {
     display: flex;
     justify-content: center;
 }
 
-.loginsignuplist > button {
+.loginsignuplist > a > button {
     padding: 10px 15px;
     background-color: #ffffff;
     margin: 20px 15px;
@@ -277,9 +212,10 @@ table {
     border: 1px solid #438e29;
 }
 
-.loginsignuplist > button:hover {
+.loginsignuplist > a:hover button {
     color: #ffffff;
     background-color: #51af33;
+    cursor: pointer;
 }
 
 .loginsignupheader {
@@ -290,22 +226,6 @@ table {
      text-align: center;
 }
 
-.socialmedia > button {
-    width: 425px;
-    border-radius: 5px;
-    color: #ffffff;
-    padding: 10px;
-    font-size: 20px;
-    margin: 10px;
-}
-
-.facebook {
-    background: #3B5998;
-}
-
-.google {
-    background: #D73D32;
-}
 
 .loginsignuptext {
     font-size: 14px;
@@ -403,6 +323,10 @@ table {
     -webkit-font-smoothing: antialiased;
 }
 
+.signupform input[type="submit"]:hover {
+    background: #438e29;
+}
+
 .loginform {
     background: white;
     width: 500px;
@@ -435,6 +359,10 @@ table {
     margin: 15px 25px 10px 25px;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
+}
+
+.loginform input[type="submit"]:hover {
+    background: #438e29;
 }
 
 .loginform > label input[type="password"] {
@@ -563,13 +491,13 @@ table {
     height: 20px;
 }
 
-.fab.fa-facebook-square {
+.fab.fa-github-square {
     padding: 0px 5px;
     width: 20px;
     height: 20px;
 }
 
-.fab.fa-twitter {
+.fab.fa-linkedin {
     padding-right: 5px;
     width: 20px;
     height: 20px;
