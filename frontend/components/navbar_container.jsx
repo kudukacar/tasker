@@ -2,7 +2,11 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { getCategories } from '../actions/category_actions';
 import NotLoggedInCats from './not_logged_in_categories_container';
+import LoggedInCats from './logged_in_categories_container';
+import GetInspired from  './get_inspired';
+
 
 const mapStateToProps = (state, ownProps) => {
     const session_id = state.session.id;
@@ -12,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 
 class Navbar extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     render() {
@@ -34,6 +38,7 @@ class Navbar extends React.Component {
             <main>
                 <section className="titleimage">
                     <div className="loggedintitle">Book Your Next Task</div>
+                    <LoggedInCats/>
                 </section>
                 <section className="loggedinsubtitle">
                         <div>What else is on your to-do list?</div> 
@@ -68,8 +73,9 @@ class Navbar extends React.Component {
                         <br/> 
                         to get things done around the home</div>
                         <div className="subtitle">Choose from over 140,000 background checked Taskers for help without breaking the bank.</div>
-                        {/* <NotLoggedInCats/> */}
+                        <NotLoggedInCats />
                 </section>
+                <GetInspired />
                 <section className="howitworks">
                     <div>How It Works</div>
                     <ol className="howitworkslist">

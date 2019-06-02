@@ -12,11 +12,11 @@ const mapDispatchToProps = (dispatch) => ({
     getCategories: () => dispatch(getCategories()),
 });
 
-class NotLoggedInCats extends React.Component {
+class LoggedInCats extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
-        this.state = {mode: 'See More'};
+        this.state = { mode: 'See More' };
     }
 
     componentDidMount() {
@@ -25,10 +25,10 @@ class NotLoggedInCats extends React.Component {
 
     handleClick(e) {
         e.preventDefault();
-        if(this.state.mode === 'See Less') {
-            this.setState({mode: 'See More'});
+        if (this.state.mode === 'See Less') {
+            this.setState({ mode: 'See More' });
         } else {
-            this.setState({mode: 'See Less'});
+            this.setState({ mode: 'See Less' });
         }
     }
 
@@ -36,27 +36,33 @@ class NotLoggedInCats extends React.Component {
         const categories = this.props.categories.map(category => <li key={category.id}>{category.title}</li>);
 
 
-        if(this.state.mode === 'See Less') {
+        if (this.state.mode === 'See Less') {
             return (
                 <div className="cats">
                     <ul>
-                        {categories.slice(0, 3)}
+                        {categories.slice(0, 5)}
                     </ul>
                     <ul>
-                        {categories.slice(3, 6)}
+                        {categories.slice(5, 9)}
                     </ul>
                     <ul>
-                        {categories.slice(6, 10)}
+                        {categories.slice(9, 13)}
+                    </ul>
+                    <ul>
+                        {categories.slice(13, 18)}
+                    </ul>
+                    <ul>
+                        {categories.slice(18, 20)}
                         <span onClick={this.handleClick}>See Less</span>
                     </ul>
                 </div>
             )
         } else {
-            return(
+            return (
                 <div className="cats">
-                    <ul>{categories.slice(0, 3)}</ul>
+                    <ul>{categories.slice(0, 5)}</ul>
                     <ul>
-                        {categories.slice(3, 6)}
+                        {categories.slice(5, 7)}
                         <span onClick={this.handleClick}>See More</span>
                     </ul>
                 </div>
@@ -68,4 +74,4 @@ class NotLoggedInCats extends React.Component {
 }
 
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NotLoggedInCats));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LoggedInCats));

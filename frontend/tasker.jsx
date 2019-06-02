@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {fetchCategories} from './util/category_api_util';
+import {fetchCategories, fetchCategory} from './util/category_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
+import {getCategories, getCategory} from './actions/category_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -25,3 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.fetchCategories = fetchCategories;
+window.getCategories = getCategories;
+window.fetchCategory = fetchCategory;
+window.getCategory = getCategory;

@@ -27,8 +27,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol, ul, li {
+    list-style: none;
 }
 blockquote, q {
 	quotes: none;
@@ -103,6 +103,44 @@ table {
     font-size: 24px;
     color:#242A30;
     -webkit-font-smoothing: antialiased;
+    padding-bottom: 10px;
+}
+
+.cats {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.cats > ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.cats > ul > li {
+    padding: 13px 33px;
+    margin: 0px 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #51af33;
+    border: 1px solid #51af33;
+    cursor: pointer;
+}
+
+.cats > ul > li:hover {
+    color: #ffffff;
+    background-color: #51af33;
+}
+.cats > ul > span {
+    padding: 13px 0px;
+    margin: 0px 10px;
+    font-size: 16px;
+    color: #51af33;
+    cursor: pointer;
+}
+.cats > ul > span:hover {
+    color: #438e29;
 }
 
 .howitworks {
@@ -114,7 +152,7 @@ table {
     background-color: #f9fafb;
     height: 530px;
     padding: 48px 70px;
-    margin: 0px 0px 40px;
+    margin: 0px 0px 0px;
     font-size: 40px;
     -webkit-font-smoothing: antialiased;
 
@@ -153,6 +191,146 @@ table {
 .howitworkstitle {
     font-size: 24px;
     -webkit-font-smoothing: antialiased;
+}
+
+.getinspired {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.getinspiredtitle {
+    font-size: 40px;
+    color: #242A30;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 40px;
+}
+.getinpiredimg1 {
+    width: 655px;
+    height: 390px;
+}
+
+.getinspiredimage2 {
+    height: 300px;
+    width: 315px;
+}
+
+.getinspiredfirst {
+    display: flex;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.getinspiredfirst > div > li {
+    padding: 13px 33px;
+    margin: 0px 10px;
+    background-color: #51af33;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.getinspiredfirst > div > li:hover {
+    background-color:#438e29;
+}
+.getinspiredfirstsubtitle {
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 50px;
+    padding-bottom: 15px;
+
+}
+.getinspiredprice {
+    color: #31A7A8;
+    padding-bottom: 20px;
+}
+.fas.fa-tag {
+    transform: rotate(90deg);
+    padding: 0px 15px;
+}
+
+.getinspiredfirst  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9fafb;
+    padding: 32px;
+    width: 252px;
+    margin-left: 30px;
+}
+
+.getinspiredsecond {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+.getinspiredsecond > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9fafb;
+    width: 315px;
+    height: 480px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.getinspiredsecond > div > li {
+    padding: 13px 33px;
+    margin: 0px 10px;
+    background-color: #51af33;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.getinspiredsecond > div > li:hover {
+    background-color:#438e29;
+}
+
+.getinspiredothersubtitle {
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 15px;
+    padding-top: 20px;
+
+}
+.fasend {
+    transform: rotate(90deg);
+    font-size: 48px;
+    color: #51af33;
+ 
+}
+.fasstart {
+    transform: rotate(-90deg);
+    font-size: 48px;
+    color: lightgray;
+}
+.fasend > i {
+    cursor: pointer;
+}
+.fasstart2 {
+    transform: rotate(-90deg);
+    font-size: 48px;
+    color: #51af33;
+ 
+}
+.fasend2 {
+    transform: rotate(90deg);
+    font-size: 48px;
+    color: lightgray;
+}
+.fasstart2 > i {
+    cursor: pointer;
 }
 
 .footer {
