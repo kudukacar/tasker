@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import NotLoggedInCats from './not_logged_in_categories_container';
 
 const mapStateToProps = (state, ownProps) => {
     const session_id = state.session.id;
@@ -10,9 +10,13 @@ const mapStateToProps = (state, ownProps) => {
     return { user };
 };
 
-const Navbar = (props) => {
+class Navbar extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-    if (props.user) {
+    render() {
+    if(this.props.user) {
         return (
         <div className="homepage">
             <header className="mainnav">
@@ -64,6 +68,7 @@ const Navbar = (props) => {
                         <br/> 
                         to get things done around the home</div>
                         <div className="subtitle">Choose from over 140,000 background checked Taskers for help without breaking the bank.</div>
+                        {/* <NotLoggedInCats/> */}
                 </section>
                 <section className="howitworks">
                     <div>How It Works</div>
@@ -105,6 +110,7 @@ const Navbar = (props) => {
             </main>
         </div>
         )
+    }
     }
 
 }
