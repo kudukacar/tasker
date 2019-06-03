@@ -18,6 +18,17 @@ class User < ApplicationRecord
     through: :tasker_cats,
     source: :category
 
+    has_many :tasks,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Task
+
+    has_many :tasks_to_do,
+    primary_key: :id,
+    foreign_key: :tasker_id,
+    class_name: :Task
+
+
     after_initialize :ensure_session_token
 
     def self.find_by_credentials(email, password)

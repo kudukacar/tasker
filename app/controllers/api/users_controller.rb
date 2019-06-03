@@ -10,9 +10,9 @@ class Api::UsersController < ApplicationController
         end
     end
 
-    def index
-        @taskers = User.where('tasker = true');
-        render :index
+    def show
+        @user = User.find(params[:id]);
+        render :show
     end
 
     private

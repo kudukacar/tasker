@@ -1,2 +1,1 @@
-json.extract! @category, :id, :title
-json.taskerIds @category.tasker_cats.pluck[:user_id]
+json.extract! @category, :id, :title, :tasker_ids

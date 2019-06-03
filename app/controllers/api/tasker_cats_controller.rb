@@ -5,7 +5,7 @@ class Api::TaskerCatsController < ApplicationController
     end
 
     def show
-        @taskercat = TaskerCat.find(params[:id);
+        @taskercat = TaskerCat.find(params[:id]);
         render :show
     end
 
