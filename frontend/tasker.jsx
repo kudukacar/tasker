@@ -4,6 +4,11 @@ import {fetchCategories, fetchCategory} from './util/category_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
 import {getCategories, getCategory} from './actions/category_actions';
+import { fetchTaskerCats, fetchTaskerCat} from './util/tasker_cat_api_util';
+import { fetchTasker } from './util/user_api_util';
+import { getTasker } from './actions/tasker_actions';
+import { getTaskerCats, getTaskerCat } from './actions/tasker_cat_actions';
+import { fetchTask, createTask } from './util/task_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -29,3 +34,11 @@ window.fetchCategories = fetchCategories;
 window.getCategories = getCategories;
 window.fetchCategory = fetchCategory;
 window.getCategory = getCategory;
+window.fetchTaskerCat = fetchTaskerCat;
+window.fetchTaskerCats = fetchTaskerCats;
+window.fetchTasker = fetchTasker;
+window.getTasker = getTasker;
+window.getTaskerCat = getTaskerCat;
+window.getTaskerCats = getTaskerCats;
+window.createTask = createTask;
+window.fetchTask = fetchTask;
