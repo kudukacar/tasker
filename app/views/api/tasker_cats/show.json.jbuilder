@@ -1,0 +1,1 @@
+json.extract! @taskercat, :id, :category_id, :user_id, :hourly_rate, :skills_description

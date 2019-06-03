@@ -10,6 +10,11 @@ class Api::UsersController < ApplicationController
         end
     end
 
+    def index
+        @taskers = User.where('tasker = true');
+        render :index
+    end
+
     private
     def user_params
         params.require(:user).permit(:email, :password, :first_name, :last_name, :zipcode, :tasker)

@@ -9,6 +9,15 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6}, allow_nil: true 
     validates :tasker, inclusion: { in: [true, false]}
 
+    has_many :tasker_cats,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :TaskerCat
+
+    has_many :categories,
+    through: :tasker_cats,
+    source: :category
+
     after_initialize :ensure_session_token
 
     def self.find_by_credentials(email, password)
