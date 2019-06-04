@@ -33,38 +33,38 @@ class LoggedInCats extends React.Component {
     }
 
     render() {
-        const categories = this.props.categories.map(category => <li key={category.id}>{category.title}</li>);
+        const categories = this.props.categories.map(category => <Link to={`/categories/${category.id}`} key={category.id}><button>{category.title}</button></Link>);
 
 
         if (this.state.mode === 'See Less') {
             return (
                 <div className="cats">
-                    <ul>
+                    <div>
                         {categories.slice(0, 5)}
-                    </ul>
-                    <ul>
+                    </div>
+                    <div>
                         {categories.slice(5, 9)}
-                    </ul>
-                    <ul>
+                    </div>
+                    <div>
                         {categories.slice(9, 13)}
-                    </ul>
-                    <ul>
+                    </div>
+                    <div>
                         {categories.slice(13, 18)}
-                    </ul>
-                    <ul>
+                    </div>
+                    <div>
                         {categories.slice(18, 20)}
                         <span onClick={this.handleClick}>See Less</span>
-                    </ul>
+                    </div>
                 </div>
             )
         } else {
             return (
                 <div className="cats">
-                    <ul>{categories.slice(0, 5)}</ul>
-                    <ul>
+                    <div>{categories.slice(0, 5)}</div>
+                    <div>
                         {categories.slice(5, 7)}
                         <span onClick={this.handleClick}>See More</span>
-                    </ul>
+                    </div>
                 </div>
             )
 

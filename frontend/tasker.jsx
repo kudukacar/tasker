@@ -9,6 +9,7 @@ import { fetchTasker } from './util/user_api_util';
 import { getTasker } from './actions/tasker_actions';
 import { getTaskerCats, getTaskerCat } from './actions/tasker_cat_actions';
 import { fetchTask, createTask } from './util/task_api_util';
+import {makeTask, getTask} from './actions/task_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -42,3 +43,5 @@ window.getTaskerCat = getTaskerCat;
 window.getTaskerCats = getTaskerCats;
 window.createTask = createTask;
 window.fetchTask = fetchTask;
+window.makeTask = makeTask;
+window.getTask = getTask;
