@@ -33,32 +33,32 @@ class NotLoggedInCats extends React.Component {
     }
 
     render() {
-        const categories = this.props.categories.map(category => <li key={category.id}>{category.title}</li>);
+        const categories = this.props.categories.map(category => <Link to='/loginsignup' key={category.id}><button>{category.title}</button></Link>);
 
 
         if(this.state.mode === 'See Less') {
             return (
                 <div className="cats">
-                    <ul>
+                    <div>
                         {categories.slice(0, 3)}
-                    </ul>
-                    <ul>
+                    </div>
+                    <div>
                         {categories.slice(3, 6)}
-                    </ul>
-                    <ul>
+                    </div>
+                    <div>
                         {categories.slice(6, 10)}
                         <span onClick={this.handleClick}>See Less</span>
-                    </ul>
+                    </div>
                 </div>
             )
         } else {
             return(
                 <div className="cats">
-                    <ul>{categories.slice(0, 3)}</ul>
-                    <ul>
+                    <div>{categories.slice(0, 3)}</div>
+                    <div>
                         {categories.slice(3, 6)}
                         <span onClick={this.handleClick}>See More</span>
-                    </ul>
+                    </div>
                 </div>
             )
 

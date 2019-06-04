@@ -4,6 +4,7 @@ import errorsReducer from './errors_reducer';
 import sessionReducer from './session_reducer';
 import CategoriesReducer from './categories_reducer';
 import TaskerCatsReducer from './tasker_cats_reducer';
+import tasksReducer from './tasks_reducer';
 
 
 export default combineReducers({
@@ -12,4 +13,5 @@ export default combineReducers({
     errors: errorsReducer,
     categories: CategoriesReducer,
     taskerCats: TaskerCatsReducer,
+    tasks: tasksReducer,
 });

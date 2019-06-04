@@ -111,35 +111,38 @@ table {
     flex-direction: column;
     margin-top: 10px;
 }
-.cats > ul {
+.cats > div {
     display: flex;
     justify-content: center;
     padding: 10px 0px;
 }
 
-.cats > ul > li {
+.cats > div > a > button {
     padding: 13px 33px;
     margin: 0px 10px;
     background-color: #ffffff;
     border-radius: 5px;
     font-size: 16px;
-    color: #51af33;
-    border: 1px solid #51af33;
+    color: none;
+    color: #438e29;
+    border:none;
+    border: 1px solid #438e29;
+}
+
+.cats > div > a:hover button {
+    color: #ffffff;
+    background-color: #51af33;
     cursor: pointer;
 }
 
-.cats > ul > li:hover {
-    color: #ffffff;
-    background-color: #51af33;
-}
-.cats > ul > span {
+.cats > div > span {
     padding: 13px 0px;
     margin: 0px 10px;
     font-size: 16px;
     color: #51af33;
     cursor: pointer;
 }
-.cats > ul > span:hover {
+.cats > div > span:hover {
     color: #438e29;
 }
 
