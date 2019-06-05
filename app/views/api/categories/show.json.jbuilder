@@ -1,1 +1,1 @@
-json.extract! @category, :id, :title, :tasker_ids
+json.extract! @category, :id, :title, :tasker_ids, :tasker_cat_ids
