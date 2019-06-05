@@ -9,7 +9,6 @@ class TaskLocation extends React.Component {
         super(props);
         this.state = {
             start_address: "",
-            complete: false,
         }
         this.handleClick = this.handleClick.bind(this);
         this.update = this.update.bind(this);
@@ -24,31 +23,20 @@ class TaskLocation extends React.Component {
     handleClick(e) {
         e.preventDefault();
         if (this.state.start_address) {
-            this.setState({ complete: true }, () => {
-                this.props.handleData({ start_address: this.state.start_address });
-            });
-            
+            this.props.handleData({ start_address: this.state.start_address });
         }
     }
 
-
     render() {
-            if (this.state.complete === false) {
                 return (
-                    <div>
+                    <div className="taskinterest">
+                        <div>
                         <div>YOUR TASK LOCATION</div>
                         <input type="text" value={this.state.start_address} onChange={this.update('start_address')} />
-                        <button onClick={this.handleClick}>Continue</button>
+                        <h1><button onClick={this.handleClick}>Continue</button></h1>
+                    </div>
                     </div>
                 )
-            } else {
-                return (
-                    <div>
-                        <div>YOUR TASK LOCATION</div>
-                        <div>{this.state.start_address}</div>
-                    </div>
-                )
-            }
     }
 }
 

@@ -688,3 +688,168 @@ table {
     width: 20px;
     height: 20px;
 }
+
+.lowernav {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    list-style: decimal;
+    list-style-position: inside;
+    color: #B1B9C3;
+
+}
+
+.lowernav > li {
+    padding: 20px 160px 20px 0px;
+    list-style: none;
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.selected {
+    color: #404852;
+}
+.lowernav > i {
+    padding-top: 20px;
+    padding-right: 15px;
+    color: #404852;
+}
+.lowernavcont {
+    display: flex;
+    flex-direction: column;
+}
+
+.lowernavcont > div {
+    display: flex;
+    justify-content: center;
+    background: #E8EBEF;
+    font-size: 20px;
+    padding: 20px 0px;
+}
+
+.lowernavcont > div > div {
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.lowernavcont > div > i {
+    margin-right: 16px;
+    color: #438e29;
+}
+.taskform > main > h1 {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.taskform > main > h3 {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+.taskform > main {
+    background: #f9fafb;
+}
+
+.taskinterest {
+    border: 2px solid #dce0e6;
+    margin: 20px 200px 5px 200px;
+    background: #ffffff;
+}
+
+.taskinterest > div {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskinterest > div > div {
+    padding-bottom: 15px;
+}
+.taskinterest > div > span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.taskinterest > div > label {
+    line-height: 1.5;
+}
+.taskinterest > div > h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.taskinterest > div > h1 > button {
+    padding: 13px 30px;
+    background-color:#51af33;
+    border-radius: 5px;
+    font-size: 16px;
+    color: none;
+    color: #ffffff;
+    font-size: 19px;
+}
+
+.taskinterest > div > h1 > button:hover {
+    background-color: #438e29;
+    cursor: pointer;
+}
+
+.taskinterest > div > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fas.fa-clipboard-check {
+    padding-right: 10px;
+    color: #86919D;
+}
+.fas.fa-check {
+    color: #51af33;
+}
+
+.taskinterest > div > h2 > label > i {
+    color: #86919D;
+}
+
+.taskinterest > div > h2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskinterest > div > h2 > div{
+    color: #36B5BB;
+}
+
+.taskinterest > div > input[type="text"] {
+    height: 40px;
+    border: none;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 0px 10px;
+    font-size: 16px;
+}
+.fas.fa-tasks {
+    padding-right: 10px;
+    color: #86919D;
+}
+
+.taskinterest > div > p {
+    line-height: 1.5;
+}
+
+.taskinterest > div > textarea {
+    height: 100px;
+    resize: none;
+    border: 1px solid #51af33;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+}

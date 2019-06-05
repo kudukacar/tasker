@@ -1,2 +1,2 @@
 json.partial! 'api/users/user', user: @user
-json.category_ids @user.categories.pluck(:id)
+json.tasker_cats @user.tasker_cats.pluck(:id)

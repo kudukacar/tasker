@@ -35,19 +35,23 @@ class TaskOptions extends React.Component {
     render() {
         if (this.state.complete === false) {
             return (
-                <div>
-                    <div>TASK OPTIONS</div>
-                    <input type="radio" name="taskoption" value="Small - Est. 1 hr" onChange={this.update('size')} />
-                    <input type="radio" name="taskoption" value="Medium - Est. 2-3 hrs" onChange={this.update('size')} />
-                    <input type="radio" name="taskoption" value="Large - Est. 4+ hrs" onChange={this.update('size')} />
-                    <button onClick={this.handleClick}>Continue</button>
+                <div className="taskinterest">
+                    <div>
+                        <div>TASK OPTIONS</div>
+                        <label><input type="radio" name="taskoption" value="Small - Est. 1 hr" onChange={this.update('size')} /> Small - Est. 1hr</label>
+                        <label><input type="radio" name="taskoption" value="Medium - Est. 2-3 hrs" onChange={this.update('size')} /> Medium - Est. 2-3 hrs</label>
+                        <label><input type="radio" name="taskoption" value="Large - Est. 4+ hrs" onChange={this.update('size')} /> Large - Est. 4+ hrs</label>
+                        <h1><button onClick={this.handleClick}>Continue</button></h1>
+                    </div>
                 </div>
             )
         } else {
             return (
+                <div className="taskinterest">
                 <div>
-                    <div>TASK OPTIONS</div>
-                    <div>{this.state.size}</div>
+                    <div><div>TASK OPTIONS</div><i className="fas fa-check"></i></div>
+                        <label><i className="fas fa-tasks"></i>{this.state.size}</label>
+                </div>
                 </div>
             )
         }

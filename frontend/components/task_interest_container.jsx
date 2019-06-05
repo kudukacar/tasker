@@ -10,6 +10,7 @@ class TaskInterest extends React.Component {
         this.state = {
             taskinterest:"",
             complete: false,
+            status:"booked",
         }
         this.handleClick = this.handleClick.bind(this);
         this.update = this.update.bind(this);
@@ -24,7 +25,8 @@ class TaskInterest extends React.Component {
     handleClick(e) {
         e.preventDefault();
         if (this.state.taskinterest) {
-            this.setState({ complete: true } );
+            this.setState({ complete: true });
+            this.props.handleData({ status: this.state.status });
         }
     }
     
@@ -32,19 +34,24 @@ class TaskInterest extends React.Component {
     render() {
             if (this.state.complete === false) {
                 return (
-                    <div>
+                    <div className="taskinterest">
+                        <div>
                         <div>TASK INTEREST</div>
-                        <input type="radio" name="taskinterest" value="I'm ready to book right now" onChange={this.update('taskinterest')} />
-                        <input type="radio" name="taskinterest" value="I'm interested in booking sometime soon" onChange={this.update('taskinterest')} />
-                        <input type="radio" name="taskinterest" value="I'm just browsing" onChange={this.update('taskinterest')} />
-                        <button onClick={this.handleClick}>Continue</button>
+                        <span>What brings you here today?</span>
+                        <label><input type="radio" name="taskinterest" value="I'm ready to book right now" onChange={this.update('taskinterest')} /> I'm ready to book right now</label>
+                        <label><input type="radio" name="taskinterest" value="I'm interested in booking sometime soon" onChange={this.update('taskinterest')} /> I'm interested in booking sometime soon</label>
+                        <label><input type="radio" name="taskinterest" value="I'm just browsing" onChange={this.update('taskinterest')} /> I'm just browsing</label>
+                        <h1><button onClick={this.handleClick}>Continue</button></h1>
+                        </div>
                     </div>
                 )
             } else {
                 return (
-                    <div>
-                        <div>TASK INTEREST</div>
-                        <div>{this.state.taskinterest}</div>
+                    <div className="taskinterest">
+                        <div>
+                            <div><div>TASK INTEREST</div><i className="fas fa-check"></i></div>
+                        <label><i className="fas fa-clipboard-check"></i>{this.state.taskinterest}</label>
+                        </div>
                     </div>
                 )
             }
