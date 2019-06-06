@@ -26,7 +26,7 @@ class Navbar extends React.Component {
             <header className="mainnav">
                 <nav className="leftnav">
                     <ul>
-                        <li>Tasker</li>
+                        <li><Link to='/'>Tasker</Link></li>
                     </ul>
                 </nav>
                 <nav className="rightnav">
@@ -58,7 +58,7 @@ class Navbar extends React.Component {
             <header className="mainnav">
                 <nav className="leftnav">
                     <ul>
-                        <li>Tasker</li>
+                        <li><Link to='/'>Tasker</Link></li>
                     </ul>
                 </nav>
                 <nav className="rightnav">

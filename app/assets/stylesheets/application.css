@@ -69,6 +69,7 @@ table {
     list-style-type: none;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 
 }
 
@@ -225,7 +226,7 @@ table {
     padding-left: 20px;
 }
 
-.getinspiredfirst > div > li {
+.getinspiredfirst > div > a > button{
     padding: 13px 25px;
     margin: 0px 10px;
     background-color: #51af33;
@@ -235,7 +236,7 @@ table {
     cursor: pointer;
 }
 
-.getinspiredfirst > div > li:hover {
+.getinspiredfirst > div > a:hover > button{
     background-color:#438e29;
 }
 .getinspiredfirstsubtitle {
@@ -284,7 +285,7 @@ table {
     margin-left: 20px;
     margin-right: 10px;
 }
-.getinspiredsecond > div > li {
+.getinspiredsecond > div > a > button{
     padding: 13px 33px;
     margin: 0px 10px;
     background-color: #51af33;
@@ -294,7 +295,7 @@ table {
     cursor: pointer;
 }
 
-.getinspiredsecond > div > li:hover {
+.getinspiredsecond > div > a:hover > button{
     background-color:#438e29;
 }
 
@@ -342,7 +343,7 @@ table {
     font-size: 20px;
     background: #67727E;
     padding: 32px 180px 32px 180px;
-    height: 350px;
+    height: fit-content;
     color: #B1B9C3;
 }
 
@@ -644,14 +645,26 @@ table {
     padding-bottom: 10px;
 }
 
-.accountformcontainer > section > ul {
+.accountformcontainer > section > div > ul {
     font-size: 20px;
     text-align: left;
     line-height: 2.0;
-    padding: 10px 0px 20px 280px;
+    padding: 10px 0px 20px 50px;
 }
 
-.accountformcontainer > section > ul > li > button {
+.accountformcontainer > section > div {
+    display: flex;
+}
+.accountformcontainer > section > div > img {
+    width: 142px;
+    height: 142px;
+    border-radius: 50%;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+
+.accountformcontainer > section > div > ul > li > button {
     padding: 10px 22px;
     border-radius: 5px;
     font-size: 16px;
@@ -702,19 +715,35 @@ table {
 }
 
 .lowernav > li {
-    padding: 20px 160px 20px 0px;
+    padding: 15px 200px 15px 0px;
     list-style: none;
     list-style: decimal;
     list-style-position: inside;
+     -webkit-font-smoothing: antialiased;
+}
+.lowernav > span {
+    padding-left: 200px;
 }
 
 .selected {
     color: #404852;
 }
-.lowernav > i {
-    padding-top: 20px;
+.fas.fa-pencil-alt {
+    padding-top: 15px;
     padding-right: 15px;
     color: #404852;
+}
+
+.fas.fa-smile {
+    padding-top: 15px;
+    padding-right: 15px;
+    color:#242A30;
+}
+
+.fas.fa-check {
+    padding-top: 15px;
+    padding-right: 15px;
+    color:#242A30;
 }
 .lowernavcont {
     display: flex;
@@ -727,11 +756,13 @@ table {
     background: #E8EBEF;
     font-size: 20px;
     padding: 20px 0px;
+     -webkit-font-smoothing: antialiased;
 }
 
 .lowernavcont > div > div {
     font-weight: bold;
     padding-right: 5px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .lowernavcont > div > i {
@@ -742,6 +773,7 @@ table {
     font-size: 32px;
     text-align: center;
     padding-top: 32px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .taskform > main > h3 {
@@ -749,6 +781,7 @@ table {
     text-align: center;
     padding-top: 16px;
     padding-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
 }
 .taskform > main {
     background: #f9fafb;
@@ -758,6 +791,7 @@ table {
     border: 2px solid #dce0e6;
     margin: 20px 200px 5px 200px;
     background: #ffffff;
+    -webkit-font-smoothing: antialiased;
 }
 
 .taskinterest > div {
@@ -838,8 +872,10 @@ table {
     color: #86919D;
 }
 
+
 .taskinterest > div > p {
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
 .taskinterest > div > textarea {
@@ -852,4 +888,273 @@ table {
     padding: 10px;
     line-height: 1.5;
     border-radius: 5px;
+}
+
+.taskerProfile {
+    display: flex;
+    border: 1px solid lightgray;
+    background: #ffffff;
+    margin: 40px 300px 40px 300px;
+    border-radius: 5px;
+    -webkit-font-smoothing: antialiased;
+}
+.taskerProfile > div {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+
+.taskerName{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 100px;
+    border-bottom: 1px solid lightgray;
+    padding-right: 50px;
+}
+.taskerName > h2 {
+    font-size: 32px;
+}
+
+.taskerName > span {
+    font-size: 24px;
+}
+.taskerProfile > div > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+.taskerinfo > div > h3 {
+    font-weight: bold;
+    line-height: 1.5;
+    padding-top: 20px;
+}
+
+.taskerinfo >  div > h4 {
+    line-height: 1.5;
+}
+.taskerimagesec {
+    align-items: center;
+    width: 33%;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.taskerimagesec > span {
+    text-align: center;
+}
+
+.taskerinfo {
+    width: 66%;
+}
+
+.taskerProfile > div > h1 > button {
+    padding: 13px 30px;
+    background-color:#51af33;
+    border-radius: 5px;
+    font-size: 16px;
+    color: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 20px 0px;
+}
+
+.taskerProfile > div > h1 > button:hover {
+    background-color: #438e29;
+    cursor: pointer;
+}
+.datetimebackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9fafb;
+    height: 740px;
+}
+
+.datetime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    background: #ffffff;
+    width: 50%;
+    height: 40%;
+    padding: 32px;
+    border-radius: 5px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.datetimeinput {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding-right: 30px;
+    border-right: 1px solid lightgray;
+}
+
+.datetime > div > div > h2 {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.datetime > div > div > label > input[type = "date"] {
+    padding: 10px 5px 10px 5px;
+    width: 90%;
+    font-size: 16px;
+    margin: 10px 0px 10px 0px;
+}
+
+.datetime > div > div > label > input[type = "time"] {
+    padding: 10px 5px 10px 5px;
+    width: 90%;
+    font-size: 16px;
+    margin: 10px 0px 10px 0px; 
+}
+
+.datetimeinfo > div > h1 > button{
+    padding: 13px 30px;
+    background-color:#51af33;
+    border-radius: 5px;
+    font-size: 16px;
+    color: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 20px 0px;
+}
+.datetimeinfo > div > h1 > button:hover {
+    background-color: #438e29;
+    cursor: pointer;
+}
+.datetimeinfo {
+    line-height: 1.5;
+}
+
+.datetimeinfo > div {
+    padding-left: 30px; 
+}
+
+.datetimeinfo > div > div {
+    font-size: 24px;
+}
+
+.maketask {
+    display: flex;
+    justify-content: center;
+    background: #f9fafb;
+    padding: 50px 270px;
+}
+
+.maketask > form > h1 > button {
+    padding: 13px 30px;
+    background-color:#51af33;
+    border-radius: 5px;
+    font-size: 19px;
+    color: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 20px 0px;
+    
+}
+
+
+.maketask > form > h1 > button:hover {
+    background-color: #438e29;
+    cursor: pointer;
+}
+
+.maketask > form > h1 {
+    text-align: center;
+}
+
+.maketask > form {
+    border: 1px solid lightgray;
+    padding: 24px;
+    margin-right: 30px;
+    background: #ffffff;
+    width: 60%;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-radius: 5px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.maketask > form > div {
+    padding-bottom: 15px; 
+}
+
+.maketask > form > textarea {
+    height: 200px; 
+    width: 95%;
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+     border: 1px solid #67727E;;
+}
+
+.maketask > div {
+    border: 1px solid lightgray;
+    padding: 16px;
+    background: #ffffff;
+    width: 40%;
+    height: fit-content;
+    line-height: 1.5;
+}
+
+
+
+.confirmheader {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+   
+}
+.maketask > div > div > div > img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.maketask > div > div > div {
+    display: flex;
+    flex-direction: column;
+}
+.confirmheader > div > h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.confirmtaskinfo {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+    line-height: 3;
+    padding: 10px 0px;
+}
+.confirmtaskinfo > span > i {
+    padding-right: 16px;
+}
+
+.confirmprice {
+    padding: 16px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmpolicy {
+    font-size: 14px;
+    padding: 15px 0px;
+}
+
+.confirmpolicy > p {
+    padding: 15px 0px;
 }

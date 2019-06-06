@@ -47,6 +47,8 @@ class NotLoggedInCats extends React.Component {
                     </div>
                     <div>
                         {categories.slice(6, 10)}
+                    </div>
+                    <div>
                         <span onClick={this.handleClick}>See Less</span>
                     </div>
                 </div>
@@ -57,6 +59,8 @@ class NotLoggedInCats extends React.Component {
                     <div>{categories.slice(0, 3)}</div>
                     <div>
                         {categories.slice(3, 6)}
+                    </div>
+                    <div>
                         <span onClick={this.handleClick}>See More</span>
                     </div>
                 </div>
