@@ -16,7 +16,7 @@ class GetInspired extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
-        this.state = { mode: 'See Less' };
+        this.state = { mode: 'See More' };
     }
 
     componentDidMount() {
@@ -34,7 +34,7 @@ class GetInspired extends React.Component {
 
 
     render() {
-        const categories = this.props.categories.map(category => <li key={category.id}>Book {category.title}</li>);
+        const categories = this.props.categories.map(category => <Link to='/loginsignup' key={category.id}><button>Book {category.title}</button></Link>);
 
         if (this.state.mode === 'See More') {
             return (

@@ -13,10 +13,9 @@ class TaskerIndex extends React.Component {
 
     taskers() {
         return this.props.taskers.map(tasker => {
-            this.props.taskerCats.map(taskerCat => {
+            return this.props.taskerCats.map((taskerCat, idx) => {
                 if(taskerCat.user_id === tasker.id) {
-                    return (<li><TaskerIndexItem
-                        key={tasker.id}
+                    return (<li key={idx}><TaskerIndexItem
                         tasker={tasker}
                         skillsDescription={taskerCat.skills_description}
                         hourlyRate={taskerCat.hourly_rate}
