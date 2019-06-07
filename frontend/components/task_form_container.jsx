@@ -33,7 +33,7 @@ const mapStateToProps = (state, ownProps) => {
         detail: "",
         user_id: user.id,
         tasker_id: null,
-        status: "",
+        status: "booked",
         date: "",
         time: "",
         size: "",
@@ -84,6 +84,7 @@ class TaskForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.setState({ category_id: this.props.category.id });
         this.props.makeTask(this.state).then(() => this.props.history.push('/'));
     }
 
@@ -131,7 +132,8 @@ class TaskForm extends React.Component {
                         <h3>These details will help us show Taskers that suit your needs</h3>
 
                         <section>
-                            <TaskInterest handleData={this.handleParentData}/>
+                            <TaskInterest 
+                            handleData={this.handleParentData}/>
                         </section>
                         <section>
                             <div className="taskinterest">

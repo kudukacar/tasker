@@ -373,9 +373,13 @@ table {
     border-radius: 5px;
     color: #ffffff;
     font-size: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     margin-top: 40px;
     cursor: pointer;
+}
+
+.loginsignupform > h2 {
+    padding-bottom: 40px;
 }
 
 .loginsignupform > button:hover {
@@ -1157,4 +1161,10 @@ table {
 
 .confirmpolicy > p {
     padding: 15px 0px;
+}
+
+.error {
+    font-size: 14px;
+    color: #d14200;
+    padding-top: 15px;
 }

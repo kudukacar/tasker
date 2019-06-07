@@ -9,6 +9,7 @@ class TaskLocation extends React.Component {
         super(props);
         this.state = {
             start_address: "",
+            error: false,
         }
         this.handleClick = this.handleClick.bind(this);
         this.update = this.update.bind(this);
@@ -24,7 +25,16 @@ class TaskLocation extends React.Component {
         e.preventDefault();
         if (this.state.start_address) {
             this.props.handleData({ start_address: this.state.start_address });
+        } else {
+            this.setState({ error: true });
         }
+    }
+
+    error() {
+        if (this.state.error === true) {
+            return <p>Location is required.</p>
+        }
+
     }
 
     render() {
@@ -33,6 +43,7 @@ class TaskLocation extends React.Component {
                         <div>
                         <div>YOUR TASK LOCATION</div>
                         <input type="text" value={this.state.start_address} onChange={this.update('start_address')} />
+                        <div className="error">{this.error()}</div>
                         <h1><button onClick={this.handleClick}>Continue</button></h1>
                     </div>
                     </div>

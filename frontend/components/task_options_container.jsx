@@ -10,6 +10,7 @@ class TaskOptions extends React.Component {
         this.state = {
             size: "",
             complete: false,
+            error: false,
         }
         this.handleClick = this.handleClick.bind(this);
         this.update = this.update.bind(this);
@@ -28,7 +29,16 @@ class TaskOptions extends React.Component {
                 this.props.handleData({ size: this.state.size });
             });
 
+        } else {
+            this.setState({ error: true });
         }
+    }
+
+    error() {
+        if (this.state.error === true) {
+            return <p>Must be chosen.</p>
+        }
+
     }
 
 
@@ -41,6 +51,7 @@ class TaskOptions extends React.Component {
                         <label><input type="radio" name="taskoption" value="Small - Est. 1 hr" onChange={this.update('size')} /> Small - Est. 1hr</label>
                         <label><input type="radio" name="taskoption" value="Medium - Est. 2-3 hrs" onChange={this.update('size')} /> Medium - Est. 2-3 hrs</label>
                         <label><input type="radio" name="taskoption" value="Large - Est. 4+ hrs" onChange={this.update('size')} /> Large - Est. 4+ hrs</label>
+                        <div className="error">{this.error()}</div>
                         <h1><button onClick={this.handleClick}>Continue</button></h1>
                     </div>
                 </div>
