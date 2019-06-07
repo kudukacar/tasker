@@ -663,8 +663,8 @@ table {
     width: 142px;
     height: 142px;
     border-radius: 50%;
-    padding-left: 50px;
-    padding-top: 20px;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
 
@@ -1106,6 +1106,7 @@ table {
     width: 40%;
     height: fit-content;
     line-height: 1.5;
+    border-radius: 5px;
 }
 
 
