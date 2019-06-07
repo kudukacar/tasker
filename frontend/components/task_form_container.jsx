@@ -29,7 +29,7 @@ const mapStateToProps = (state, ownProps) => {
     const session_id = state.session.id;
     const user = state.entities.users[session_id];
     const task = {
-        category_id: category.id,
+        category_id: id,
         detail: "",
         user_id: user.id,
         tasker_id: null,
