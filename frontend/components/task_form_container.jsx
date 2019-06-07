@@ -84,7 +84,7 @@ class TaskForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.setState({ category_id: this.props.category.id });
+        // this.setState({ category_id: this.props.category.id });
         this.props.makeTask(this.state).then(() => this.props.history.push('/'));
     }
 
