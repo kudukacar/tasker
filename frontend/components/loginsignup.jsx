@@ -30,9 +30,9 @@ class Loginsignup extends React.Component {
         <form className="loginsignupform">
         <h1 className="loginsignupheader">Tasker</h1>
         <button onClick={this.handleClick}>Demo User</button>
-        <br></br>
+        <h2>or</h2> 
         <span>
-            Log in or sign up with email
+            Log in or sign up
         </span>
         <div className="loginsignuplist">
             <Link to={"/login"}><button>Log in</button></Link>
