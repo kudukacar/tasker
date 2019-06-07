@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Category.destroy_all
+TaskerCat.destroy_all
+
 
 User.create(first_name:"Demo", last_name:"User", email:"demouser@gmail.com", zipcode:11004, password:"demosuser", tasker: false);
 User.create(first_name:"Ma", last_name:"Th", email:"math@gmail.com", zipcode:11004, password:"demosuser", tasker: true);
