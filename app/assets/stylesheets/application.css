@@ -797,6 +797,15 @@ table {
     background: #ffffff;
     -webkit-font-smoothing: antialiased;
 }
+.taskinterest2 {
+    border: 2px solid #dce0e6;
+    margin: 20px 200px 5px 200px;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+
 
 .taskinterest > div {
     padding: 22px;
@@ -804,9 +813,21 @@ table {
     flex-direction: column;
 }
 
+.taskinterest2 > div {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .taskinterest > div > div {
     padding-bottom: 15px;
 }
+
+.taskinterest2 > div > div {
+    padding-bottom: 15px;
+}
+
 .taskinterest > div > span {
     font-size: 20px;
     font-weight: bold;
@@ -814,6 +835,9 @@ table {
     margin-bottom: 15px;
 }
 .taskinterest > div > label {
+    line-height: 1.5;
+}
+.taskinterest2 > div > label {
     line-height: 1.5;
 }
 .taskinterest > div > h1 {
@@ -841,6 +865,10 @@ table {
     justify-content: space-between;
 }
 
+.taskinterest2 > div > div {
+    display: flex;
+    justify-content: space-between;
+}
 .fas.fa-clipboard-check {
     padding-right: 10px;
     color: #86919D;
@@ -853,12 +881,12 @@ table {
     color: #86919D;
 }
 
-.taskinterest > div > h2 {
+.taskinterest2 > div > h2 {
     display: flex;
     justify-content: space-between;
 }
 
-.taskinterest > div > h2 > div{
+.taskinterest2 > div > h2 > div{
     color: #36B5BB;
 }
 

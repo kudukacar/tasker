@@ -9,9 +9,11 @@ class TaskLocation extends React.Component {
         super(props);
         this.state = {
             start_address: "",
+            complete: false,
             error: false,
         }
         this.handleClick = this.handleClick.bind(this);
+        this.handleReClick = this.handleReClick.bind(this);
         this.update = this.update.bind(this);
     }
 
@@ -24,10 +26,15 @@ class TaskLocation extends React.Component {
     handleClick(e) {
         e.preventDefault();
         if (this.state.start_address) {
-            this.props.handleData({ start_address: this.state.start_address });
+            this.setState({ complete: true }, 
+            this.props.handleData({ start_address: this.state.start_address }));
         } else {
             this.setState({ error: true });
         }
+    }
+    handleReClick(e) {
+        e.preventDefault();
+        this.setState({ complete: false });
     }
 
     error() {
@@ -38,6 +45,7 @@ class TaskLocation extends React.Component {
     }
 
     render() {
+        if (this.state.complete === false) {
                 return (
                     <div className="taskinterest">
                         <div>
@@ -48,6 +56,19 @@ class TaskLocation extends React.Component {
                     </div>
                     </div>
                 )
+        } else {
+            return (
+                <div className="taskinterest2" onClick={this.handleReClick}>
+                    <div>
+                        <div><div>YOUR TASK LOCATION</div><i className="fas fa-check"></i></div>
+                        <h2>
+                            <label><i className="fas fa-map-marker-alt"></i>{this.state.start_address}</label>
+                            <div>Good news!  Tasker is available in your area</div>
+                        </h2>
+                    </div>
+                </div>
+            )
+        }
     }
 }
 

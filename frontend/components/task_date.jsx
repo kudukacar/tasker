@@ -60,7 +60,36 @@ class TaskDate extends React.Component {
         }
         return (year + dash + month + dash + day);
     }
+    
+    displayDate() {
+        const date = this.state.date.split("-");
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const monthint = parseInt(date[1]);
+        const month = months[monthint - 1];
+        return (month + " " + date[2] + ",");
 
+    }
+
+    displayTime() {
+        const time = this.state.time.split(":");
+        const timeInt = parseInt(time[0]);
+        let ampm = "";
+        if(timeInt < 12) {
+            ampm = "am";
+        } else {
+            ampm = "pm";
+        }
+        let hour = null;
+        if(timeInt === 0) {
+            hour = 12;
+        } else if(timeInt < 13) {
+            hour = timeInt;
+        } else {
+            hour = timeInt - 12;
+        }
+
+        return (hour + ":" + time[1] + ampm);
+    }
 
     header() {
         const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -85,7 +114,7 @@ class TaskDate extends React.Component {
                     <div className="datetimeinfo">
                         <div>
                         <div>Request for:</div>
-                        <div>{this.state.date} {this.state.time}</div>
+                        <div>{this.displayDate()} {this.displayTime()}</div>
                         <h1><button onClick={this.handleClick}>Select &amp; Continue</button></h1>
                         </div>
                     </div>

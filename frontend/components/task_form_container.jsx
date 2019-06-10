@@ -113,6 +113,36 @@ class TaskForm extends React.Component {
             })
         }
     }
+
+    displayDate() {
+        const date = this.state.date.split("-");
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const monthint = parseInt(date[1]);
+        const month = months[monthint - 1];
+        return (month + " " + date[2]);
+
+    }
+
+    displayTime() {
+        const time = this.state.time.split(":");
+        const timeInt = parseInt(time[0]);
+        let ampm = "";
+        if (timeInt < 12) {
+            ampm = "am";
+        } else {
+            ampm = "pm";
+        }
+        let hour = null;
+        if (timeInt === 0) {
+            hour = 12;
+        } else if (timeInt < 13) {
+            hour = timeInt;
+        } else {
+            hour = timeInt - 12;
+        }
+
+        return (hour + ":" + time[1] + ampm);
+    }
     render() {
         if(this.state.status === "") {
             return(
@@ -217,15 +247,7 @@ class TaskForm extends React.Component {
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
                         <section>
-                            <div className="taskinterest">
-                                <div>
-                                    <div><div>YOUR TASK LOCATION</div><i className="fas fa-check"></i></div>
-                                    <h2>
-                                        <label><i className="fas fa-map-marker-alt"></i>{this.state.start_address}</label>
-                                        <div>Good news!  Tasker is available in your area</div>
-                                    </h2>
-                                </div>
-                            </div>
+                            <TaskLocation handleData={this.handleParentData} />
                         </section>
                         <section>
                             <TaskOptions handleData={this.handleParentData} />
@@ -261,15 +283,7 @@ class TaskForm extends React.Component {
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
                         <section>
-                            <div className="taskinterest">
-                                <div>
-                                    <div><div>YOUR TASK LOCATION</div><i className="fas fa-check"></i></div>
-                                    <h2>
-                                        <label><i className="fas fa-map-marker-alt"></i>{this.state.start_address}</label>
-                                        <div>Good news!  Tasker is available in your area</div>
-                                    </h2>
-                                </div>
-                            </div>
+                            <TaskLocation handleData={this.handleParentData} />
                         </section>
                         <section>
                             <TaskOptions handleData={this.handleParentData} />
@@ -342,7 +356,7 @@ class TaskForm extends React.Component {
                             </div>
                         </div>
                             <div className="confirmtaskinfo">
-                                <span><i className="far fa-calendar"></i>{this.state.date} at {this.state.time}</span>
+                                <span><i className="far fa-calendar"></i>{this.displayDate()} at {this.displayTime()}</span>
                                 <span><i className="fas fa-map-marker-alt"></i>{this.state.start_address}</span>
                                 <span><i className="fas fa-tasks"></i>{this.state.size}</span>
                             </div>
