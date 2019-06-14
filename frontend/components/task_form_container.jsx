@@ -33,7 +33,7 @@ const mapStateToProps = (state, ownProps) => {
         detail: "",
         user_id: user.id,
         tasker_id: null,
-        status: "booked",
+        status: "",
         date: "",
         time: "",
         size: "",
