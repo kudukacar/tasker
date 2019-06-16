@@ -1,1 +1,1 @@
-json.extract! user, :id, :first_name, :last_name, :email, :zipcode, :tasker
+json.extract! user, :id, :first_name, :last_name, :email, :zipcode, :tasker, :tasker_cat_ids, :task_ids

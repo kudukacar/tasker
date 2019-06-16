@@ -189,7 +189,7 @@ class TaskForm extends React.Component {
                     </main>
                 </div>
             )
-        } else if(this.state.start_address === "") {
+        } else if(this.state.start_address === "") { 
             return(
                 <div className="taskform">
                     <header className="mainnav">

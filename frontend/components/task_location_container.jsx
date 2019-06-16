@@ -14,7 +14,6 @@ class TaskLocation extends React.Component {
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleReClick = this.handleReClick.bind(this);
-        this.update = this.update.bind(this);
     }
 
     update(field) {
@@ -26,13 +25,17 @@ class TaskLocation extends React.Component {
     handleClick(e) {
         e.preventDefault();
         if (this.state.start_address) {
-            this.setState({ complete: true });
+            this.setState({ complete: true }, () => {
+                this.handleAddress();
+            });
+
         } else {
             this.setState({ error: true });
         }
-        if(this.state.complete === true) {
-            this.props.handleData({ start_address: this.state.start_address });
-        }
+    }
+    handleAddress() {
+        this.props.handleData({ start_address: this.state.start_address });
+     
     }
     handleReClick(e) {
         e.preventDefault();
