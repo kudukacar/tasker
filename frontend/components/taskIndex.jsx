@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getTasks } from '../actions/task_actions';
+import { getTasks, cancelTask } from '../actions/task_actions';
 import TaskIndexItem from './taskIndexItem';
 import { getCategories } from '../actions/category_actions';
 import { getTaskers } from '../actions/tasker_actions';
@@ -14,7 +14,8 @@ const mapStateToProps = (state) => {
     const tasks = state.tasks;
     const categories = state.categories;
     const taskers = state.entities.taskers;
-    return { user, tasks, categories, taskers };
+    const taskerCats = state.taskerCats;
+    return { user, tasks, categories, taskers, taskerCats };
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -22,6 +23,8 @@ const mapDispatchToProps = (dispatch) => {
         getTasks: () => dispatch(getTasks()),
         getCategories: () => dispatch(getCategories()),
         getTaskers: () => dispatch(getTaskers()),
+        getTaskerCats: () => dispatch(getTaskerCats()),
+        cancelTask: (id) => dispatch(cancelTask(id)),
     }
 };
 
@@ -37,6 +40,7 @@ class TaskIndex extends React.Component {
         this.props.getTasks();
         this.props.getTaskers();
         this.props.getCategories();
+        this.props.getTaskerCats();
     }
 
     currentDate(date, time) {
@@ -75,6 +79,8 @@ class TaskIndex extends React.Component {
                         task={task}
                         category={this.props.categories[task.category_id]}
                         tasker={this.props.taskers[task.tasker_id]}
+                        taskerCats={this.props.taskerCats}
+                        cancelTask={this.props.cancelTask}
                     /></li>)
                 }
             })
@@ -88,6 +94,8 @@ class TaskIndex extends React.Component {
                     return (<li key={task.id}><TaskIndexItem task={task}
                         category={this.props.categories[task.category_id]}
                         tasker={this.props.taskers[task.tasker_id]}
+                        taskerCats={this.props.taskerCats}
+                        cancelTask={this.props.cancelTask}
                     /></li>)
                 }
             })
@@ -130,7 +138,7 @@ class TaskIndex extends React.Component {
                                 {this.currentTasks()}
                             </ul>
                         </section>
-                        <section>
+                        <section className="taskindexothertasks">
                             <h1>Have something else on your to-do list?</h1>
                             <h2>Book your next task or manage future to-dos with TaskRabbit</h2>
                             <Link to='/'><button>Check It Off Your List</button></Link>
@@ -165,6 +173,11 @@ class TaskIndex extends React.Component {
                             <ul>
                                 {this.pastTasks()}
                             </ul>
+                        </section>
+                        <section className="taskindexothertasks">
+                            <h1>Have something else on your to-do list?</h1>
+                            <h2>Book your next task or manage future to-dos with TaskRabbit</h2>
+                            <Link to='/'><button>Check It Off Your List</button></Link>
                         </section>
                         <footer className="footer">
                             <div className="footericonsdesc">

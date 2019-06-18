@@ -8,8 +8,8 @@ import { fetchTaskerCats, fetchTaskerCat} from './util/tasker_cat_api_util';
 import { fetchTasker, fetchTaskers } from './util/user_api_util';
 import { getTasker, getTaskers } from './actions/tasker_actions';
 import { getTaskerCats, getTaskerCat } from './actions/tasker_cat_actions';
-import { fetchTask, createTask, fetchTasks } from './util/task_api_util';
-import {makeTask, getTask, getTasks} from './actions/task_actions';
+import { fetchTask, createTask, fetchTasks, deleteTask } from './util/task_api_util';
+import {makeTask, getTask, getTasks, cancelTask} from './actions/task_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -49,3 +49,5 @@ window.makeTask = makeTask;
 window.getTask = getTask;
 window.getTasks = getTasks;
 window.getTaskers = getTaskers;
+window.deleteTask = deleteTask;
+window.cancelTask = cancelTask;

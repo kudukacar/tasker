@@ -1220,7 +1220,7 @@ table {
 .taskindex > div > ul {
     display: flex;
     flex-direction: row; 
-    justify-content: left;
+    padding-right: 700px;
 }
 
 .taskindex > div > ul > li {
@@ -1230,10 +1230,44 @@ table {
 .taskindexselected {
     color: #51af33;
     border-bottom: 2px solid #51af33;
+    cursor: pointer;
 }
 
 .taskindexunselected {
     color: #86919D;
+    cursor: pointer;
+}
+
+.taskindexothertasks {
+    text-align: center;
+    line-height: 2.0;
+}
+
+.taskindexothertasks > h1 {
+    font-size: 32px;
+    padding-top: 40px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.taskindexothertasks > h2 {
+    font-size: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.taskindexothertasks > a > button{
+    padding: 10px 50px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    background-color: #51af33;
+    border-radius: 5px;
+    font-size: 19px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.taskindexothertasks > a:hover > button {
+    background-color:#438e29;
 }
 
 .taskindexitem {
@@ -1244,10 +1278,20 @@ table {
     background: #ffffff;
 }
 
-.taskindexitem > div > img {
+.taskindexcategory > div > img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.taskindexcategory > div > span {
+      color: #438e29;
+      cursor: pointer;
+      padding-left: 10px;
+}
+.taskindexcategory > div {
+    display: flex;
+    align-items: center;
 }
 
 .taskindexcategory {
@@ -1259,6 +1303,7 @@ table {
 
 .taskindexcategory > h1 {
     font-size: 28px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .taskindexitem > h2 {
@@ -1269,6 +1314,7 @@ table {
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     border-left: 5px solid #f9c339;
+    -webkit-font-smoothing: antialiased;
 
 }
 
@@ -1291,11 +1337,13 @@ table {
 .taskindexday {
     font-size: 20px;
     padding-right: 10px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .taskindexmonth {
     font-size: 14px;
     padding-right: 10px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .taskindexitem > span {
@@ -1303,8 +1351,43 @@ table {
     display: flex;
     justify-content: center;
     padding: 10px 0px;
+    cursor: pointer;
 }
 
 .taskindexitem > span > i {
     padding-left: 8px;
+}
+
+.taskindexiteminfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+.taskindexiteminfo > ul {
+    padding-left: 20px;
+    padding-right: 100px;
+    padding-top: 20px;
+}
+
+.taskindexitemdetail {
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+
+}
+.taskindexitemdesc {
+    line-height: 1.5;
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+
+.taskindexitemscope {
+    font-size: 18px;
+    border-top: 1px solid #67727E; 
+    width: fit-content;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 40px; 
+    -webkit-font-smoothing: antialiased;
 }

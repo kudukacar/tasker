@@ -26,17 +26,13 @@ class TaskLocation extends React.Component {
         e.preventDefault();
         if (this.state.start_address) {
             this.setState({ complete: true }, () => {
-                this.handleAddress();
+                this.props.handleData({ start_address: this.state.start_address });
             });
-
         } else {
             this.setState({ error: true });
         }
     }
-    handleAddress() {
-        this.props.handleData({ start_address: this.state.start_address });
-     
-    }
+
     handleReClick(e) {
         e.preventDefault();
         this.setState({ complete: false });

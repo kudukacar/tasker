@@ -210,7 +210,7 @@ class TaskForm extends React.Component {
                         <section>
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
-                            <TaskLocation handleData={this.handleParentData} />
+                            <TaskLocation handleData={this.handleParentData}/>
                         <section>
                             <div className="taskinterest">
                                 <div>

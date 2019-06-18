@@ -31,6 +31,7 @@ class Navbar extends React.Component {
                 </nav>
                 <nav className="rightnav">
                     <ul>
+                        <li><Link to='/mytasks'>My Tasks</Link></li>
                         <li><Link to='/account'>Account</Link></li>
                     </ul>
                 </nav>
