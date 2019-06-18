@@ -4,34 +4,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getTasks } from '../actions/task_actions';
 import TaskIndexItem from './taskIndexItem';
+import { getCategories } from '../actions/category_actions';
+import { getTaskers } from '../actions/tasker_actions';
 
 
 const mapStateToProps = (state) => {
     const session_id = state.session.id;
     const user = state.entities.users[session_id];
-    const tasks = user.task_ids.map(task_id => state.tasks[task_id]);
-    return { user, tasks };
+    const tasks = state.tasks;
+    const categories = state.categories;
+    const taskers = state.entities.taskers;
+    return { user, tasks, categories, taskers };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
         getTasks: () => dispatch(getTasks()),
-    };
+        getCategories: () => dispatch(getCategories()),
+        getTaskers: () => dispatch(getTaskers()),
+    }
 };
 
 class TaskIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { task: 'current'};
+        this.state = { mode: 'current'};
+        this.handlePastClick = this.handlePastClick.bind(this);
+        this.handleCurrentClick = this.handleCurrentClick.bind(this);
     }
 
     componentDidMount() {
         this.props.getTasks();
+        this.props.getTaskers();
+        this.props.getCategories();
     }
 
     currentDate(date, time) {
         let dateFormat = date.split("-");
-        dateFormatInt = parseInt(dateFormat[1]) - 1;
+        let dateFormatInt = parseInt(dateFormat[1]) - 1;
         if(dateFormatInt < 10) {
             dateFormat[1] = "0" + dateFormatInt;
         } else {
@@ -42,52 +52,133 @@ class TaskIndex extends React.Component {
         timeFormat[2] = timeFormat[2].slice(0,2);
         const todaysDate = new Date();
         const dateTime = new Date(dateFormat[0], dateFormat[1], dateFormat[2], timeFormat[0], timeFormat[1], timeFormat[2]);
-        if (todaysDate < dateTime) {
+        if (todaysDate > dateTime) {
             return false;
         } else {
             return true;
         }
 
     }
+    userTasks() {
+        if (this.props.user.task_ids.length > 0) {
+            return this.props.user.task_ids.map(task_id => this.props.tasks[task_id]);
+        } else {
+            return [undefined];
+        }
+    }
 
     currentTasks() {
-        return this.props.tasks.map(task => {
-            if(this.currentDate(task.date, task.time)) {
-                return (<li key={task.id}><TaskIndexItem
-                    task={task}/></li>)
-            }
-        })
+        if(this.userTasks()[0] !== undefined) {
+            return this.userTasks().map(task => {
+                if (this.currentDate(task.date, task.time)) {
+                    return (<li key={task.id}><TaskIndexItem
+                        task={task}
+                        category={this.props.categories[task.category_id]}
+                        tasker={this.props.taskers[task.tasker_id]}
+                    /></li>)
+                }
+            })
+        }
     }
 
     pastTasks() {
-        return this.props.tasks.map(task => {
-            if (this.currentDate(task.date, task.time) === false) {
-                return (<li key={task.id}><TaskIndexItem
-                    task={task} /></li>)
-            }
-        })
+        if (this.userTasks()[0] !== undefined) {
+            return this.userTasks().map(task => {
+                if (this.currentDate(task.date, task.time) === false) {
+                    return (<li key={task.id}><TaskIndexItem task={task}
+                        category={this.props.categories[task.category_id]}
+                        tasker={this.props.taskers[task.tasker_id]}
+                    /></li>)
+                }
+            })
+        }
+    }
+
+    handleCurrentClick(e) {
+        e.preventDefault();
+        this.setState({ mode: 'current' });
+       
+    }
+
+    handlePastClick(e) {
+        e.preventDefault();
+        this.setState({ mode: 'past' });
+
     }
 
     render() {
-        if(this.state.task === 'current') {
+        if(this.state.mode === 'current') {
             return (
                 <div>
-                    <ul>
-                        {this.currentTasks()}
-                    </ul>
+                    <header className="mainnav">
+                        <nav className="leftnav">
+                            <ul>
+                                <li><Link to='/'>Tasker</Link></li>
+                            </ul>
+                        </nav>
+                        <nav className="rightnav">
+                            <ul>
+                                <li><Link to='/mytasks'>My Tasks</Link></li>
+                                <li><Link to='/account'>Account</Link></li>
+                            </ul>   
+                        </nav>
+                    </header>
+                    <main className="taskindexpage">
+                        <section className="taskindex">
+                            <div><ul><li className='taskindexselected' onClick={this.handleCurrentClick}>CURRENT</li><li className='taskindexunselected' onClick={this.handlePastClick}>PAST</li></ul></div>
+                            <ul>
+                                {this.currentTasks()}
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Have something else on your to-do list?</h1>
+                            <h2>Book your next task or manage future to-dos with TaskRabbit</h2>
+                            <Link to='/'><button>Check It Off Your List</button></Link>
+                        </section>
+                        <footer className="footer">
+                            <div className="footericonsdesc">
+                                <div>Follow us! We're friendly: <i className="fab fa-github-square"></i> | <i className="fab fa-linkedin"></i></div>
+                            </div>
+                        </footer>
+                    </main>
                 </div>
             )
         } else {
             return (
                 <div>
-                    <ul>
-                        {this.pastTasks()}
-                    </ul>
+                    <header className="mainnav">
+                        <nav className="leftnav">
+                            <ul>
+                                <li><Link to='/'>Tasker</Link></li>
+                            </ul>
+                        </nav>
+                        <nav className="rightnav">
+                            <ul>
+                                <li><Link to='/mytasks'>My Tasks</Link></li>
+                                <li><Link to='/account'>Account</Link></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <main className="taskindexpage">
+                        <section className='taskindex'>
+                            <div><ul><li className='taskindexunselected' onClick={this.handleCurrentClick}>CURRENT</li><li className='taskindexselected' onClick={this.handlePastClick}>PAST</li></ul></div>
+                            <ul>
+                                {this.pastTasks()}
+                            </ul>
+                        </section>
+                        <footer className="footer">
+                            <div className="footericonsdesc">
+                                <div>Follow us! We're friendly: <i className="fab fa-github-square"></i> | <i className="fab fa-linkedin"></i></div>
+                            </div>
+                        </footer>
+                    </main>
                 </div>
+                
+
             )
         }
         
     }
 }
 
-export default TaskIndex;
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TaskIndex));

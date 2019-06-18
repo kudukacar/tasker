@@ -76,6 +76,11 @@ table {
 .rightnav > ul {
     list-style-type: none;
     font-size: 16px;
+    display: flex;
+}
+
+.rightnav > ul > li {
+    padding-left:30px;
 }
 
 
@@ -1196,4 +1201,110 @@ table {
     font-size: 14px;
     color: #d14200;
     padding-top: 15px;
+}
+.taskindexpage{
+    border-top: 1px solid lightgray;
+    background: #f9fafb;
+    padding-top: 70px;
+}
+.taskindex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.taskindex > div {
+    display: flex;
+    justify-content: left;
+}
+
+.taskindex > div > ul {
+    display: flex;
+    flex-direction: row; 
+    justify-content: left;
+}
+
+.taskindex > div > ul > li {
+    padding: 0px 24px 12px;
+}
+
+.taskindexselected {
+    color: #51af33;
+    border-bottom: 2px solid #51af33;
+}
+
+.taskindexunselected {
+    color: #86919D;
+}
+
+.taskindexitem {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #ffffff;
+}
+
+.taskindexitem > div > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.taskindexcategory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+}
+
+.taskindexcategory > h1 {
+    font-size: 28px;
+}
+
+.taskindexitem > h2 {
+    font-size: 16px;
+    padding: 12px 40px;
+    padding-right: 250px;
+    background: #f9fafb;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 5px solid #f9c339;
+
+}
+
+.taskindextime {
+    display: flex;
+    align-items: center; 
+    padding: 24px 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.taskindextime > ul {
+    padding: 0px 8px;
+    line-height: 1.5; 
+    border-right: 1px solid lightgray;
+}
+
+.taskindextime > span {
+    padding: 0px 10px;
+}
+.taskindexday {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.taskindexmonth {
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.taskindexitem > span {
+    color: #438e29;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.taskindexitem > span > i {
+    padding-left: 8px;
 }

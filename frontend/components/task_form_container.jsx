@@ -14,7 +14,7 @@ import {getTaskerCats} from '../actions/tasker_cat_actions';
 import TaskLowerNavView from './task_lower_now_view';
 import TaskLowerNavConf from './task_lower_nav_conf';
 import TaskDate from './task_date';
-import {makeTask} from '../actions/task_actions';
+import {makeTask, getTasks} from '../actions/task_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const id = ownProps.match.params.categoryId;
@@ -58,6 +58,7 @@ const mapDispatchToProps = dispatch => {
         getCategories: () => dispatch(getCategories()),
         getTaskers: () => dispatch(getTaskers()),
         getTaskerCats: () => dispatch(getTaskerCats()),
+        getTasks: () => dispatch(getTasks()),
         makeTask: (task) => dispatch(makeTask(task)),
     };
 };
@@ -85,13 +86,14 @@ class TaskForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         // this.setState({ category_id: this.props.category.id });
-        this.props.makeTask(this.state).then(() => this.props.history.push('/'));
+        this.props.makeTask(this.state).then(() => this.props.history.push('/mytasks'));
     }
 
     componentDidMount() {
         this.props.getCategories();
         this.props.getTaskers();
         this.props.getTaskerCats();
+        this.props.getTasks();
     }
 
     tasker() {
