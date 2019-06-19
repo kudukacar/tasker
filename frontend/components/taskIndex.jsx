@@ -11,7 +11,7 @@ import { getTaskers } from '../actions/tasker_actions';
 const mapStateToProps = (state) => {
     const session_id = state.session.id;
     const user = state.entities.users[session_id];
-    const tasks = state.tasks;
+    const tasks = Object.values(state.tasks);
     const categories = state.categories;
     const taskers = state.entities.taskers;
     const taskerCats = state.taskerCats;
@@ -64,8 +64,12 @@ class TaskIndex extends React.Component {
 
     }
     userTasks() {
-        if (this.props.user.task_ids.length > 0) {
-            return this.props.user.task_ids.map(task_id => this.props.tasks[task_id]);
+        if (this.props.tasks) {
+            return this.props.tasks.map(task => {
+                if(task.user_id === this.props.user.id) {
+                    return task;
+                }
+            });
         } else {
             return [undefined];
         }

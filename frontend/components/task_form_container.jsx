@@ -210,7 +210,7 @@ class TaskForm extends React.Component {
                         <section>
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
-                            <TaskLocation handleData={this.handleParentData}/>
+                            <TaskLocation handleData={this.handleParentData} start_address={this.state.start_address}/>
                         <section>
                             <div className="taskinterest">
                                 <div>
@@ -249,7 +249,7 @@ class TaskForm extends React.Component {
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
                         <section>
-                            <TaskLocation handleData={this.handleParentData} />
+                            <TaskLocation handleData={this.handleParentData} start_address={this.state.start_address}/>
                         </section>
                         <section>
                             <TaskOptions handleData={this.handleParentData} />
@@ -285,7 +285,7 @@ class TaskForm extends React.Component {
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
                         <section>
-                            <TaskLocation handleData={this.handleParentData} />
+                            <TaskLocation handleData={this.handleParentData} start_address={this.state.start_address}/>
                         </section>
                         <section>
                             <TaskOptions handleData={this.handleParentData} />
