@@ -35,7 +35,7 @@ class TaskIndexItem extends React.Component {
         if(this.props.task) {
             const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             const date = this.props.task.date.split("-");
-            const month = months[parseInt(date[1])];
+            const month = months[parseInt(date[1]-1)];
             return (
                 <li>{month}</li>
             )

@@ -20,7 +20,7 @@ class TaskerIndexItem extends React.Component {
 
     categoryTasks() {
         if(this.props.category && this.props.tasks) {
-            return this.props.tasks.map(task => {
+            return this.props.tasks.filter(task => {
                 if(task.tasker_id === this.props.tasker.id && task.category_id === this.props.category.id) {
                     return task;
                 }
@@ -46,7 +46,7 @@ class TaskerIndexItem extends React.Component {
                             <i className="fas fa-star"></i>
                             <div className="tooltip"><div>Elite Tasker</div> <i className="fas fa-info-circle"></i> <span className="tooltiptext">This Tasker is an Elite Tasker because they are experienced and consistently get high ratings and reviews.  Taskers are independent contractors and this badge helps you make a more informed decision when choosing a Tasker.</span></div>
                         </div>
-                    <div><i className="far fa-check-circle"></i>{this.categoryTasks().length} {this.props.category.title} Tasks</div>
+                    <div className="taskertasknumber"><i className="far fa-check-circle"></i>{this.categoryTasks().length} {this.props.category.title} Tasks</div>
                         <div className="taskerdetails">
                             <h3>How I can help:</h3>
                             <h4>{this.props.skillsDescription}</h4>
