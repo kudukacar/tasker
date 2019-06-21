@@ -26,6 +26,7 @@ const mapStateToProps = (state, ownProps) => {
     const defaultTaskerCatIds = [];
     const tasker_cat_ids = category.tasker_cat_ids || defaultTaskerCatIds;
     const taskerCats = tasker_cat_ids.map(tasker_cat_id => state.taskerCats[tasker_cat_id]);
+    const tasks = Object.values(state.tasks);
     const session_id = state.session.id;
     const user = state.entities.users[session_id];
     const task = {
@@ -50,6 +51,7 @@ const mapStateToProps = (state, ownProps) => {
         taskers: taskers,
         tasker_cat_ids: tasker_cat_ids,
         taskerCats: taskerCats,
+        tasks: tasks,
     };
 };
 
@@ -318,7 +320,9 @@ class TaskForm extends React.Component {
                             <TaskerIndex 
                             handleData={this.handleParentData}
                             taskers={this.props.taskers}
-                            taskerCats={this.props.taskerCats} />
+                            taskerCats={this.props.taskerCats}
+                            tasks={this.props.tasks}
+                            category={this.props.category} />
                         </section>
                     </main>
                 </div>

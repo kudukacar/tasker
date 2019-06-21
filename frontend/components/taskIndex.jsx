@@ -99,7 +99,6 @@ class TaskIndex extends React.Component {
                         category={this.props.categories[task.category_id]}
                         tasker={this.props.taskers[task.tasker_id]}
                         taskerCats={this.props.taskerCats}
-                        cancelTask={this.props.cancelTask}
                     /></li>)
                 }
             })

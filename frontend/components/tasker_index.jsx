@@ -19,7 +19,10 @@ class TaskerIndex extends React.Component {
                         tasker={tasker}
                         skillsDescription={taskerCat.skills_description}
                         hourlyRate={taskerCat.hourly_rate}
-                        handleData={this.props.handleData} /></li>)
+                        handleData={this.props.handleData}
+                        tasks={this.props.tasks}
+                        category={this.props.category}
+                         /></li>)
                 }
             })
         })

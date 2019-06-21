@@ -86,15 +86,32 @@ class TaskIndexItem extends React.Component {
             })
         }
     }
+
+    cancelTask() {
+        if(this.props.cancelTask) {
+            return (
+                <span onClick={() => this.props.cancelTask(this.props.task.id)}>Cancel Task</span>
+            )
+        }
+    }
+
+    taskerContact() {
+        if(this.props.cancelTask) {
+            return (
+                <h2>Taskers usually contact you to chat about your tasks in less than 1 hour.</h2>
+            )
+        }
+    }
+
     render() {
         if(this.state.mode === 'showdetails') {
             return (
                 <div className="taskindexitem">
                     <div className="taskindexcategory">
                         <h1>{this.category()}</h1>
-                        <div><img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" /><span onClick={() => this.props.cancelTask(this.props.task.id)}>Cancel Task</span></div> 
+                        <div><img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" />{this.cancelTask()}</div> 
                     </div>
-                    <h2>Taskers usually contact you to chat about your tasks in less than 1 hour.</h2>
+                    {this.taskerContact()}
                     <div className="taskindextime"><ul><ul className="taskindexday">{this.formatDate()}</ul><ul className="taskindexmonth">{this.formatMonth()}</ul></ul><span>{this.formatTime()}</span></div>
                     <span onClick={this.handleClick}><span>Show Details</span><i className="fas fa-angle-down"></i></span>
                 </div>
@@ -104,9 +121,9 @@ class TaskIndexItem extends React.Component {
                 <div className="taskindexitem">
                     <div className="taskindexcategory">
                         <h1>{this.category()}</h1>
-                        <div><img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" /><span onClick={() => this.props.cancelTask(this.props.task.id)}>Cancel Task</span></div> 
+                        <div><img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" />{this.cancelTask()}</div> 
                     </div>
-                    <h2>Taskers usually contact you to chat about your tasks in less than 1 hour.</h2>
+                    {this.taskerContact()}
                     <div className="taskindextime"><ul><ul className="taskindexday">{this.formatDate()}</ul><ul className="taskindexmonth">{this.formatMonth()}</ul></ul><span>{this.formatTime()}</span></div>
                     <div className="taskindexiteminfo">
                         <ul>

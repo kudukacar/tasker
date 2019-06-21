@@ -91,6 +91,7 @@ table {
     height: 500px;
     background-color: #f9fafb;
     background-image: url(https://i.imgur.com/5SZRejd.jpg);
+    /* background-image: url(https://rooseveltinstitute.org/wp-content/uploads/2019/03/Roosevelt-Institute_2019_Econony-Agenda_Mobile-460x260_c.png); */
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -927,12 +928,14 @@ table {
     border-radius: 5px;
 }
 
+
 .taskerProfile {
     display: flex;
     border: 1px solid lightgray;
     background: #ffffff;
-    margin: 40px 300px 40px 300px;
+    margin: 40px 300px;
     border-radius: 5px;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
 .taskerProfile > div {
@@ -944,13 +947,84 @@ table {
 .taskerName{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: 100px;
-    border-bottom: 1px solid lightgray;
+    align-items: center;
+ 
     padding-right: 50px;
+    padding-bottom: 10px;
 }
 .taskerName > h2 {
     font-size: 32px;
+}
+
+.elitetasker {
+    display: flex;
+}
+
+.fas.fa-star {
+    color: #31A7A8;
+    padding-right: 16px;
+}
+
+.fas.fa-info-circle {
+    padding-left: 5px;
+}
+
+.far.fa-check-circle {
+    padding-right: 16px;
+}
+.tooltip > div {
+    color: #31A7A8;
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #ffffff;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 135%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 35%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: lightgray transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.taskerdetails {
+   border-top: 1px solid lightgray;
 }
 
 .taskerName > span {
@@ -1299,6 +1373,7 @@ table {
     justify-content: space-between;
     align-items: center;
     padding: 18px 20px;
+    border-bottom: 1px solid lightgray;
 }
 
 .taskindexcategory > h1 {
@@ -1311,7 +1386,6 @@ table {
     padding: 12px 40px;
     padding-right: 250px;
     background: #f9fafb;
-    border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     border-left: 5px solid #f9c339;
     -webkit-font-smoothing: antialiased;
@@ -1322,6 +1396,7 @@ table {
     display: flex;
     align-items: center; 
     padding: 24px 30px;
+    padding-right: 700px;
     border-bottom: 1px solid lightgray;
 }
 
