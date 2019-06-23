@@ -5,7 +5,7 @@
 ![image](https://user-images.githubusercontent.com/41526816/59969836-b553b000-9525-11e9-8152-c2d052e83f2c.png)
     
 # Site
-[Live] (https://taskerrrr.herokuapp.com/#/)
+[Live](https://taskerrrr.herokuapp.com/#/)
 
 # Technologies
    * PostgreSQL
