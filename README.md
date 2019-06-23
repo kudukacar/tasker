@@ -2,20 +2,21 @@
 
 # Tasker 
     Tasker clones TaskRabbit, a web application to view and book taskers for various tasks.
-
 ![image](https://user-images.githubusercontent.com/41526816/59969836-b553b000-9525-11e9-8152-c2d052e83f2c.png)
-
+    
 # Site
-    https://taskerrrr.herokuapp.com/#/
+[Live] (https://taskerrrr.herokuapp.com/#/)
 
 # Technologies
    * PostgreSQL
-   * Ruby on Rails
+   * Ruby
+   * Rails
+   * Webpack
    * JavaScript
    * Redux
    * React
-   * HTML
-   * CSS
+   * HTML5
+   * CSS3
 
 # Features 
    * Authenticated users on the frontend with React Router and the backend with BCrypt, allowing users to only access and make changes to     their own tasks.  
@@ -24,8 +25,8 @@
 
 # Code Snippets
 
-## Pass information from child to parent component when booking task
-### Booking a task in TaskRabbit requires multiple steps and information over seamingly multiple pages.  To accomplish this effect, the task form (the parent component) consists of many child components.  Each child component collects a piece of data. The child components update the parent component at each step of the process (i.e. submission of child form components).  All data, stored at the parent component, informs creation of a task.     
+## Pass local state information from child to parent component when booking task
+Booking a task in TaskRabbit requires multiple steps and information over seamingly multiple pages.  To accomplish this effect, the task form (the parent component) consists of many child components.  Each child component collects a piece of data. The child components update the parent component at each step of the process (i.e. submission of child form components).  All data, stored at the parent component, informs creation of a task.     
 
 ```javascript
 // First passed a function, handleData from parent to child component
