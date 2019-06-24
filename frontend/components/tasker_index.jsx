@@ -30,7 +30,11 @@ class TaskerIndex extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="taskerindex">
+                <div>
+                    <i className="fas fa-shield-alt"></i>
+                    <div>Always have peace of mind.  All Taskers undergo ID and criminal background checks.</div>
+                </div>
                 <ul>
                     {this.taskers()}
                 </ul>

@@ -16,9 +16,8 @@ const TaskLowerNavFill = () => {
                             <li>Confirm Details</li>
                         </ul>
                         <div>
-                            <i className="fas fa-shield-alt"></i>
-                            <div>Trust &amp; Support Pledge:  </div> 
-                            <span>Always have peace of mind</span>
+                            <i className="far fa-edit"></i>
+                            <div>Tell us about your task.  We use these details to show Taskers in your area who fit your needs.</div> 
                         </div>
                     </div>
                 </div>

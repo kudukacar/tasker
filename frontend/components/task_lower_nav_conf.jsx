@@ -12,11 +12,10 @@ const TaskLowerNavConf = () => {
                     <li>View Taskers &amp; Prices</li>
                     <i className="fas fa-check"></i>
                     <li className="selected">Confirm Details</li>
-                </ul>
+                </ul> 
                 <div>
-                    <i className="fas fa-shield-alt"></i>
-                    <div>Trust &amp; Support Pledge:  </div>
-                    <span>You don't pay until your task is completed</span>
+                    <i className="far fa-list-alt"></i>
+                    <div>You're almost done!  We just need a few more details to connect you with your Tasker.  </div>
                 </div>
             </div>
         )

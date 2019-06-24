@@ -14,9 +14,8 @@ const TaskLowerNavView = () => {
                     <li>Confirm Details</li>
                 </ul>
                 <div>
-                    <i className="fas fa-shield-alt"></i>
-                    <div>Trust &amp; Support Pledge:  </div>
-                    <span>All Taskers are ID &amp; background checked</span>
+                    <i className="fas fa-user-plus"></i>
+                    <div>Filter and sort to find your Tasker.  Then view their availability to request your date and time.</div>
                 </div>
             </div>
         )

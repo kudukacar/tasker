@@ -100,25 +100,39 @@ class TaskDate extends React.Component {
 
     }
 
+    taskerName() {
+        return this.props.taskers.map(tasker => {
+            if(tasker.id === this.props.taskerId) {
+                return <li key={tasker.id}>{tasker.first_name} {tasker.last_name[0]}.'s Availability</li>
+            }
+        })
+    }
+
     render() {
             return (
-                <div className="datetimebackground">
-                <div className="datetime">
-                    <div className="datetimeinput">
-                        <div>
-                        <h2>{this.header()}</h2>
-                        <label><input type="date" min={this.todaysdate()} value={this.state.date} onChange={this.update('date')} /></label>
-                        <label><input type="time" min="08:00:00" max="16:30:00" value={this.state.time} onChange={this.update('time')} /></label>
+                <div className="datetimepage">
+                    <div className="datetimebackground">
+                        <div className="datetimeheader">Choose your task date and start time:</div>
+                        <div className="datetime">
+                            <div className="datetimeinput">
+                                <div>
+                                <ul><img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" />{this.taskerName()}</ul>
+                                <h2>{this.header()}</h2>
+                                <label><input type="date" min={this.todaysdate()} value={this.state.date} onChange={this.update('date')} /></label>
+                                <label><input type="time" min="08:00:00" max="16:30:00" value={this.state.time} onChange={this.update('time')} /></label>
+                                <h3>You can chat to adjust task details or change start time after confirming.</h3>
+                                </div>
+                            </div>
+                            <div className="datetimeinfo">
+                                <div>
+                                <div className="datetimeinfoheader">Request for:</div>
+                                <div>{this.displayDate()} {this.displayTime()}</div>
+                                <h1><button onClick={this.handleClick}>Select &amp; Continue</button></h1>
+                                <h3><i className="far fa-list-alt"></i>Next, confirm your details to get connected with your Tasker.</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="datetimeinfo">
-                        <div>
-                        <div>Request for:</div>
-                        <div>{this.displayDate()} {this.displayTime()}</div>
-                        <h1><button onClick={this.handleClick}>Select &amp; Continue</button></h1>
-                        </div>
-                    </div>
-                </div>
                 </div>
             )
     }

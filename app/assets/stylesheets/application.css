@@ -761,38 +761,34 @@ table {
 }
 
 .lowernavcont > div {
+    border-bottom: 2px solid lightgray;
     display: flex;
     justify-content: center;
-    background: #E8EBEF;
-    font-size: 20px;
+    background: #ffffff;
+    font-size: 16px;
     padding: 20px 0px;
      -webkit-font-smoothing: antialiased;
 }
 
 .lowernavcont > div > div {
-    font-weight: bold;
     padding-right: 5px;
     -webkit-font-smoothing: antialiased;
 }
 
 .lowernavcont > div > i {
     margin-right: 16px;
-    color: #438e29;
+    color: #31A7A8;
 }
 .taskform > main > h1 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
     padding-top: 32px;
+    padding-bottom: 15px;
+    padding-left: 200px;
     -webkit-font-smoothing: antialiased;
 }
 
-.taskform > main > h3 {
-    font-size: 20px;
-    text-align: center;
-    padding-top: 16px;
-    padding-bottom: 20px;
-    -webkit-font-smoothing: antialiased;
-}
 .taskform > main {
     background: #f9fafb;
 }
@@ -927,13 +923,40 @@ table {
     line-height: 1.5;
     border-radius: 5px;
 }
+.taskerindex {
+    display: flex;
+    justify-content: center;
+     -webkit-font-smoothing: antialiased;
+}
+
+.taskerindex > div {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    line-height: 1.5;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 40px;
+    margin-right: 24px;
+    margin-left: 125px;
+    background: #ffffff;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+}
+
+.fas.fa-shield-alt {
+    margin-right: 24px;
+    color: #31A7A8;
+    font-size: 32px;
+}
 
 
 .taskerProfile {
     display: flex;
     border: 1px solid lightgray;
     background: #ffffff;
-    margin: 40px 300px;
+    margin: 40px 0px;
+    margin-right: 125px;
     border-radius: 5px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -962,7 +985,8 @@ table {
 
 .fas.fa-star {
     color: #31A7A8;
-    padding-right: 16px;
+    margin-right: 16px;
+    line-height: inherit;
 }
 
 .fas.fa-info-circle {
@@ -1064,35 +1088,83 @@ table {
     background-color: #438e29;
     cursor: pointer;
 }
-.datetimebackground {
+.datetimepage {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background: #f9fafb;
     height: 740px;
+    -webkit-font-smoothing: antialiased;
+}
+.datetimebackground {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    align-items: center;
+    border: 1px solid lightgray;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 40%;
+    height: 55%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.datetimeheader {
+    font-size: 24px;
+    padding-bottom: 40px;
 }
 
+.far.fa-list-alt {
+    color: #31A7A8;
+    margin-right: 8px;
+}
 .datetime {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid lightgray;
-    background: #ffffff;
-    width: 50%;
-    height: 40%;
-    padding: 32px;
-    border-radius: 5px;
-    -webkit-font-smoothing: antialiased;
 }
 
 .datetimeinput {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-size: 16px;
     padding-right: 30px;
-    border-right: 1px solid lightgray;
+    line-height: 1.5;
+    width: 60%;
 }
 
+.datetimeinput > div > h3 {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.datetimeinput > div > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.datetimeinput > div > ul > li {
+    font-weight: bold;
+    margin-left: 16px;
+    font-size: 20px;
+}
+
+.datetimeinput > div > ul > img {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+}
+.datetimeinfo > div > h3 {
+    font-size: 14px;
+}
+
+.datetimeinfoheader {
+    padding-top: 30px;
+}
 .datetime > div > div > h2 {
     font-weight: bold;
     text-align: center;
@@ -1128,6 +1200,8 @@ table {
 }
 .datetimeinfo {
     line-height: 1.5;
+    width: 40%;
+    border-left: 1px solid lightgray;
 }
 
 .datetimeinfo > div {

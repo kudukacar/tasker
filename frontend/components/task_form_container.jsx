@@ -162,9 +162,7 @@ class TaskForm extends React.Component {
                         <TaskLowerNavFill />
                     </nav>
                     <main>
-                        <h1>Describe Your Task: {this.props.category.title}</h1>
-                        <h3>These details will help us show Taskers that suit your needs</h3>
-
+                        <h1>{this.props.category.title}</h1>
                         <section>
                             <TaskInterest 
                             handleData={this.handleParentData}/>
@@ -207,8 +205,7 @@ class TaskForm extends React.Component {
                         <TaskLowerNavFill />
                     </nav>
                     <main>
-                        <h1>Describe Your Task: {this.props.category.title}</h1>
-                        <h3>These details will help us show Taskers that suit your needs</h3>
+                        <h1>{this.props.category.title}</h1>
                         <section>
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
@@ -244,9 +241,7 @@ class TaskForm extends React.Component {
                         <TaskLowerNavFill />
                     </nav>
                     <main>
-                        <h1>Describe Your Task: {this.props.category.title}</h1>
-                        <h3>These details will help us show Taskers that suit your needs</h3>
-
+                        <h1>{this.props.category.title}</h1>
                         <section>
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
@@ -280,9 +275,7 @@ class TaskForm extends React.Component {
                         <TaskLowerNavFill />
                     </nav>
                     <main>
-                        <h1>Describe Your Task: {this.props.category.title}</h1>
-                        <h3>These details will help us show Taskers that suit your needs</h3>
-
+                        <h1>{this.props.category.title}</h1>
                         <section>
                             <TaskInterest handleData={this.handleParentData}/>
                         </section>
@@ -314,8 +307,6 @@ class TaskForm extends React.Component {
                         <TaskLowerNavView />
                     </nav>
                     <main>
-                        <h1>Pick a Tasker</h1>
-                        <h3>After booking, you can chat with your Tasker, agree on an exact time, or go over any requirements or questions, if necessary.</h3>
                         <section>
                             <TaskerIndex 
                             handleData={this.handleParentData}
@@ -330,7 +321,9 @@ class TaskForm extends React.Component {
         } else if(this.state.date === "") {
             return(
                 <TaskDate
-                handleData={this.handleParentData} />
+                handleData={this.handleParentData}
+                taskerId={this.state.tasker_id}
+                taskers={this.props.taskers} />
             )
         } else {
             return (
