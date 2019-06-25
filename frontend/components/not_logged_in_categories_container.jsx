@@ -15,55 +15,71 @@ const mapDispatchToProps = (dispatch) => ({
 class NotLoggedInCats extends React.Component {
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
-        this.state = {mode: 'See More'};
+        this.state = {
+            search: "",
+            click: "open",
+        };
     }
 
     componentDidMount() {
         this.props.getCategories();
     }
 
-    handleClick(e) {
-        e.preventDefault();
-        if(this.state.mode === 'See Less') {
-            this.setState({mode: 'See More'});
-        } else {
-            this.setState({mode: 'See Less'});
-        }
+    update(field) {
+        return (e) => {
+            this.setState({ [field]: e.target.value });
+        };
     }
+
+    searchInput() {
+        if(this.state.search) {
+            return this.props.categories.map(category => {
+                if (category.title.toLowerCase().includes(this.state.search.toLowerCase())) {
+                    return <Link to='/loginsignup' key={category.id}>{category.title}</Link>
+                }
+            })
+        }
+
+    }
+
+    // inputDropDown() {
+    //     if(this.state.search) {
+    //         return this.searchInput()
+    //     } else if(this.state.click === "open") {
+    //         const categories = this.props.categories.map(category => <Link to='/loginsignup' key={category.id}>{category.title}</Link>);
+    //         return categories.slice(6,10);
+    //     }
+    // }
+
+    // handleClick(e) {
+    //     e.preventDefault();
+    //     if(this.state.click === 'close') {
+    //         this.setState({click: 'open'});
+    //     } else {
+    //         this.setState({click: 'close'});
+    //     }
+
+    // }
+
 
     render() {
         const categories = this.props.categories.map(category => <Link to='/loginsignup' key={category.id}><button>{category.title}</button></Link>);
 
-
-        if(this.state.mode === 'See Less') {
-            return (
-                <div className="cats">
-                    <div>
-                        {categories.slice(0, 3)}
-                    </div>
-                    <div>
-                        {categories.slice(3, 6)}
-                    </div>
-                    <div>
-                        {categories.slice(6, 10)}<span onClick={this.handleClick}>See Less</span>
-                    </div>
-                </div>
-            )
-        } else {
             return(
                 <div className="cats">
                     <div>{categories.slice(0, 3)}</div>
                     <div>
                         {categories.slice(3, 6)}
                     </div>
-                    <div>
-                        <span onClick={this.handleClick}>See More</span>
+                    <div className="catsinput">
+                        <input type="text"
+                            value={this.state.search}
+                            onChange={this.update('search')}
+                            placeholder="Need something different" />
+                        <div className={this.state.click}>{this.searchInput()}</div>
                     </div>
                 </div>
             )
-
-        }
 
     }
 }

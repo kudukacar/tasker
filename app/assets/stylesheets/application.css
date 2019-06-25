@@ -97,6 +97,7 @@ table {
     text-align: center;
     color:#242A30;
     border-top: 1px solid lightgrey;
+    position: relative;
 }
 
 .title {
@@ -104,6 +105,9 @@ table {
     margin: 0px 0px 16px;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 12%;
+    left: 25%;
 }
 
 .subtitle {
@@ -111,12 +115,19 @@ table {
     color:#242A30;
     -webkit-font-smoothing: antialiased;
     padding-bottom: 10px;
+    position: absolute;
+    top: 40%;
+    left: 17%;
 }
 
 .cats {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
 }
 .cats > div {
     display: flex;
@@ -141,16 +152,31 @@ table {
     background-color: #51af33;
     cursor: pointer;
 }
-
-.cats > div > span {
-    padding: 13px 0px;
-    margin: 0px 10px;
-    font-size: 16px;
-    color: #51af33;
-    cursor: pointer;
+.catsinput {
+    display: flex;
+    flex-direction: column;
 }
-.cats > div > span:hover {
-    color: #438e29;
+
+.open {
+    border: 1px solid lightgray;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    text-align: left;
+    background: #ffffff;
+}
+
+.open > a {
+    padding: 10px 20px;
+}
+.cats input[type="text"] {
+    background: url(https://www.w3schools.com/css/searchicon.png) no-repeat scroll 15px 15px;
+    padding: 12.5px 20px 12.5px 50px;
+    background-color: #ffffff;
+    font-size: 20px;
+    width: 600px;
+    border-radius: 5px;
 }
 
 .howitworks {
