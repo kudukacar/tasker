@@ -109,6 +109,47 @@ class TaskDate extends React.Component {
     }
 
     render() {
+        const imagesObj = {
+            2: window.hs2,
+            3: window.hs3,
+            4: window.hs4,
+            5: window.hs5,
+            6: window.hs6,
+            7: window.hs7,
+            8: window.hs8,
+            9: window.hs9,
+            10: window.hs10,
+            11: window.hs11,
+            12: window.hs12,
+            13: window.hs13,
+            14: window.hs14,
+            15: window.hs15,
+            16: window.hs16,
+            17: window.hs17,
+            18: window.hs18,
+            19: window.hs19,
+            20: window.hs20,
+            21: window.hs21,
+            22: window.hs22,
+            23: window.hs2,
+            24: window.hs3,
+            25: window.hs4,
+            26: window.hs5,
+            27: window.hs6,
+            28: window.hs7,
+            29: window.hs8,
+            30: window.hs9,
+            31: window.hs10,
+            32: window.hs11,
+            33: window.hs12,
+            34: window.hs13,
+            35: window.hs14,
+            36: window.hs15,
+            37: window.hs16,
+            38: window.hs17,
+            39: window.hs18,
+            40: window.hs19,
+        }
             return (
                 <div className="datetimepage">
                     <div className="datetimebackground">
@@ -116,7 +157,7 @@ class TaskDate extends React.Component {
                         <div className="datetime">
                             <div className="datetimeinput">
                                 <div>
-                                <ul><img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" />{this.taskerName()}</ul>
+                                    <ul><img src={imagesObj[this.props.taskerId]} />{this.taskerName()}</ul>
                                 <h2>{this.header()}</h2>
                                 <label><input type="date" min={this.todaysdate()} value={this.state.date} onChange={this.update('date')} /></label>
                                 <label><input type="time" min="08:00:00" max="16:30:00" value={this.state.time} onChange={this.update('time')} /></label>

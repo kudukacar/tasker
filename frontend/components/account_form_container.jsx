@@ -39,7 +39,7 @@ const Account = (props) => {
                         <section>
                             <h3>Account</h3>
                             <div>
-                                <img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" />
+                                <img src={window.hs1} />
                                 <ul>
                                     <li><i className="fas fa-user"></i>{props.user.first_name} {props.user.last_name}</li>
                                     <li><i className="far fa-envelope"></i>{props.user.email}</li>

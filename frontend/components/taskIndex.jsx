@@ -148,7 +148,7 @@ class TaskIndex extends React.Component {
                         </section>
                         <footer className="footer">
                             <div className="footericonsdesc">
-                                <div>Follow us! We're friendly: <i className="fab fa-github-square"></i> | <i className="fab fa-linkedin"></i></div>
+                                <div>Follow us! We're friendly: <a href="https://github.com/kudukacar"><i className="fab fa-github-square"></i></a> | <a href="https://www.linkedin.com/in/thomasmanju/"><i className="fab fa-linkedin"></i></a></div>
                             </div>
                         </footer>
                     </main>
@@ -184,7 +184,7 @@ class TaskIndex extends React.Component {
                         </section>
                         <footer className="footer">
                             <div className="footericonsdesc">
-                                <div>Follow us! We're friendly: <i className="fab fa-github-square"></i> | <i className="fab fa-linkedin"></i></div>
+                                <div>Follow us! We're friendly: <a href="https://github.com/kudukacar"><i className="fab fa-github-square"></i></a> | <a href="https://www.linkedin.com/in/thomasmanju/"><i className="fab fa-linkedin"></i></a></div>
                             </div>
                         </footer>
                     </main>

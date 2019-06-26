@@ -1631,3 +1631,7 @@ table {
     padding-right: 40px; 
     -webkit-font-smoothing: antialiased;
 }
+
+.footericonsdesc > div > a {
+    color: lightgray;
+}

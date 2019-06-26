@@ -103,13 +103,60 @@ class TaskIndexItem extends React.Component {
         }
     }
 
+    taskerImage() {
+        const imagesObj = {
+            2: window.hs2,
+            3: window.hs3,
+            4: window.hs4,
+            5: window.hs5,
+            6: window.hs6,
+            7: window.hs7,
+            8: window.hs8,
+            9: window.hs9,
+            10: window.hs10,
+            11: window.hs11,
+            12: window.hs12,
+            13: window.hs13,
+            14: window.hs14,
+            15: window.hs15,
+            16: window.hs16,
+            17: window.hs17,
+            18: window.hs18,
+            19: window.hs19,
+            20: window.hs20,
+            21: window.hs21,
+            22: window.hs22,
+            23: window.hs2,
+            24: window.hs3,
+            25: window.hs4,
+            26: window.hs5,
+            27: window.hs6,
+            28: window.hs7,
+            29: window.hs8,
+            30: window.hs9,
+            31: window.hs10,
+            32: window.hs11,
+            33: window.hs12,
+            34: window.hs13,
+            35: window.hs14,
+            36: window.hs15,
+            37: window.hs16,
+            38: window.hs17,
+            39: window.hs18,
+            40: window.hs19,
+        }
+        if(this.props.tasker) {
+            return imagesObj[this.props.tasker.id]
+        }
+    }
     render() {
+        
         if(this.state.mode === 'showdetails') {
             return (
                 <div className="taskindexitem">
                     <div className="taskindexcategory">
                         <h1>{this.category()}</h1>
-                        <div><img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" />{this.cancelTask()}</div> 
+                        <div><img src={this.taskerImage()} />{this.cancelTask()}</div> 
                     </div>
                     {this.taskerContact()}
                     <div className="taskindextime"><ul><ul className="taskindexday">{this.formatDate()}</ul><ul className="taskindexmonth">{this.formatMonth()}</ul></ul><span>{this.formatTime()}</span></div>
@@ -121,7 +168,7 @@ class TaskIndexItem extends React.Component {
                 <div className="taskindexitem">
                     <div className="taskindexcategory">
                         <h1>{this.category()}</h1>
-                        <div><img src="https://www.ichs.com/wp-content/uploads/2016/11/generic-headshot-Copy-6.png" />{this.cancelTask()}</div> 
+                        <div><img src={this.taskerImage()} />{this.cancelTask()}</div> 
                     </div>
                     {this.taskerContact()}
                     <div className="taskindextime"><ul><ul className="taskindexday">{this.formatDate()}</ul><ul className="taskindexmonth">{this.formatMonth()}</ul></ul><span>{this.formatTime()}</span></div>
@@ -132,7 +179,7 @@ class TaskIndexItem extends React.Component {
                         </ul>
                         <ul>
                             <li>Tasker</li>
-                            <li className="taskindexitemdetail">William R</li>
+                            <li className="taskindexitemdetail">{this.tasker()}</li>
                         </ul>
                         <ul>
                             <li>Price</li>
