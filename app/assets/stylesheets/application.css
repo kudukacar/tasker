@@ -100,6 +100,7 @@ table {
     position: relative;
 }
 
+
 .title {
     font-size: 48px;
     margin: 0px 0px 16px;
@@ -132,6 +133,7 @@ table {
 .cats > div {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px 0px;
 }
 
@@ -169,6 +171,11 @@ table {
 
 .open > a {
     padding: 10px 20px;
+    width: 632px;
+}
+
+.open > a:hover {
+    background: #f9fafb;
 }
 .cats input[type="text"] {
     background: url(https://www.w3schools.com/css/searchicon.png) no-repeat scroll 15px 15px;
@@ -632,7 +639,76 @@ table {
     margin: 0px 0px 16px;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 18%;
+    left: 40%;
 }
+.cats2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;   
+    position: absolute;
+    top: 28%;
+    left: 20%;
+}
+.cats2 > div > a > button {
+    padding: 13px 33px;
+    margin: 0px 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: none;
+    color: #438e29;
+    border:none;
+    border: 1px solid #438e29;
+}
+
+.cats2 > div > a:hover button {
+    color: #ffffff;
+    background-color: #51af33;
+    cursor: pointer;
+}
+.catsinput2 {
+    display: flex;
+    flex-direction: column;
+}
+.cats2 > div {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.cats2 input[type="text"] {
+    background: url(https://www.w3schools.com/css/searchicon.png) no-repeat scroll 13px 13px;
+    padding: 12.5px 20px 12.5px 50px;
+    background-color: #ffffff;
+    font-size: 16px;
+    width: 810px;
+    border-radius: 5px;
+}
+
+.open2 > a {
+    padding: 10px 20px;
+    width: 842px;
+}
+
+.open2 > a:hover {
+    background: #f9fafb;
+}
+.open2 {
+    border: 1px solid lightgray;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    text-align: left;
+    background: #ffffff;
+}
+
+.cats2 > div > span {
+    cursor: pointer;
+    color: #51af33;
+} 
 
 .loggedinsubtitle {
     height: 220px;

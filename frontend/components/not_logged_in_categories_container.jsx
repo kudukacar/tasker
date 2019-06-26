@@ -17,7 +17,7 @@ class NotLoggedInCats extends React.Component {
         super(props);
         this.state = {
             search: "",
-            click: "open",
+            click: "closed",
         };
     }
 
@@ -27,7 +27,13 @@ class NotLoggedInCats extends React.Component {
 
     update(field) {
         return (e) => {
-            this.setState({ [field]: e.target.value });
+            this.setState({ [field]: e.target.value }, () => {
+                if(this.state.search) {
+                    this.setState({click: "open"});
+                } else {
+                    this.setState({click: "closed"});
+                }
+            });
         };
     }
 
@@ -41,25 +47,6 @@ class NotLoggedInCats extends React.Component {
         }
 
     }
-
-    // inputDropDown() {
-    //     if(this.state.search) {
-    //         return this.searchInput()
-    //     } else if(this.state.click === "open") {
-    //         const categories = this.props.categories.map(category => <Link to='/loginsignup' key={category.id}>{category.title}</Link>);
-    //         return categories.slice(6,10);
-    //     }
-    // }
-
-    // handleClick(e) {
-    //     e.preventDefault();
-    //     if(this.state.click === 'close') {
-    //         this.setState({click: 'open'});
-    //     } else {
-    //         this.setState({click: 'close'});
-    //     }
-
-    // }
 
 
     render() {
