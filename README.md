@@ -8,20 +8,20 @@
 [Live] (https://taskerrrr.herokuapp.com/#/)
 
 # Technologies
+   * React
+   * Redux
+   * JavaScript
    * PostgreSQL
    * Ruby
    * Rails
    * Webpack
-   * JavaScript
-   * Redux
-   * React
    * HTML5
    * CSS3
 
 # Features 
-   * Authenticated users on the frontend with React Router and the backend with BCrypt, allowing users to only access and make changes to     their own tasks.  
-   * Created Active Record associations to extract tasker data from multiple tables in a single Ajax request, avoiding inefficient database   queries and improving user’s experience.
-   * Incorporated React’s virtual DOM and Redux’s global store to seamlessly share and render information across multiple components when     booking a task.
+   * Incorporated React’s virtual DOM and Redux’s global store to seamlessly share and render information across multiple components when booking a task.  
+   * Created Active Record associations to extract tasker data from multiple tables in a single Ajax request, avoiding inefficient database queries and improving user’s experience.
+   * Authenticated users with React Router and BCrypt, and generated unique session tokens with SecureRandom, allowing logged-in users to only access and make changes to their own tasks. 
 
 # Code Snippets
 
@@ -43,6 +43,18 @@ Booking a task in TaskRabbit requires multiple steps and information over seamin
         });
 
     }
+```
+## Implemented a fuzzy search of categories
+![image](https://user-images.githubusercontent.com/41526816/60967561-fcdd8880-a2e8-11e9-999d-95b14b6c26cc.png)
+
+```javascript
+        if (this.state.search) {
+            return this.props.categories.map(category => {
+                if (category.title.toLowerCase().includes(this.state.search.toLowerCase())) {
+                    return <Link to={`/categories/${category.id}`} key={category.id}>{category.title}</Link>
+                }
+            })
+        }
 ```
 
 
