@@ -41,7 +41,7 @@ class GetInspired extends React.Component {
                 <section className="getinspired">
                     <div className="getinspiredtitle">Get Inspired</div>
                     <div className="getinspiredfirst">
-                        <img className="getinpiredimg1"src="https://www.dogpanting.info/i/2019/02/coat-bags-for-depot-hanging-hallway-world-hangers-solutions-wardrobe-modern-racks-seen-boxes-winning-bins-wall-garage-howards-hook-storage-ideas-home-pocketbook-clothes.jpg" />
+                        <img className="getinpiredimg1" src="https://s7d4.scene7.com/is/image/roomandboard/morrison_337957_18e1_g?hei=725&$str_g$" />
                         <div>
                             <div className="getinspiredfirstsubtitle">Tackle those home project &amp; repairs you've been putting off</div>
                             <div className="getinspiredprice"><i className="fas fa-tag"></i>Avg. Project: $46 - $127</div>
@@ -77,7 +77,7 @@ class GetInspired extends React.Component {
                     <section className="getinspired">
                         <div className="getinspiredtitle">Get Inspired</div>
                         <div className="getinspiredfirst">
-                            <img className="getinpiredimg1" src="https://www.dogpanting.info/i/2019/02/coat-bags-for-depot-hanging-hallway-world-hangers-solutions-wardrobe-modern-racks-seen-boxes-winning-bins-wall-garage-howards-hook-storage-ideas-home-pocketbook-clothes.jpg" />
+                            <img className="getinpiredimg1" src="https://s7d4.scene7.com/is/image/roomandboard/morrison_337957_18e1_g?hei=725&$str_g$" />
                             <div>
                                 <div className="getinspiredfirstsubtitle">Tackle those home project &amp; repairs you've been putting off</div>
                                 <div className="getinspiredprice"><i className="fas fa-tag"></i>Avg. Project: $46 - $127</div>
