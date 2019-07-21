@@ -2,10 +2,10 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getCategories } from '../actions/category_actions';
 import NotLoggedInCats from './not_logged_in_categories_container';
 import LoggedInCats from './logged_in_categories_container';
 import GetInspired from  './get_inspired';
+import { Footer } from './footer';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -18,6 +18,7 @@ class Navbar extends React.Component {
     constructor(props) {
         super(props);
     }
+
 
     render() {
     if(this.props.user) {
@@ -45,11 +46,7 @@ class Navbar extends React.Component {
                         <div>What else is on your to-do list?</div> 
                         <span>Make a list of all the things that you need to get done.  We'll help you match these items to the right category!</span>
                 </section>
-                    <footer className="footer">
-                        <div className="footericonsdesc">
-                            <div>Follow us! We're friendly: <a href="https://github.com/kudukacar"><i className="fab fa-github-square"></i></a> | <a href="https://www.linkedin.com/in/thomasmanju/"><i className="fab fa-linkedin"></i></a></div>
-                        </div>
-                    </footer>
+            <Footer/>
             </main>
         </div>
         )
@@ -90,7 +87,7 @@ class Navbar extends React.Component {
                             </div>
                         </li>
                         <li>
-                                <img className="howitworksimg" src="https://assets.taskrabbit.com/v3/assets/static/homepage/how_it_works/step_2-13d469cb04809cde3793a6bf2f6e8005.svg"/>
+                            <img className="howitworksimg" src="https://assets.taskrabbit.com/v3/assets/static/homepage/how_it_works/step_2-13d469cb04809cde3793a6bf2f6e8005.svg"/>
                             <div className="howitworkstitle">
                                 Choose Your Tasker
                             </div>
@@ -99,7 +96,7 @@ class Navbar extends React.Component {
                             </div>
                         </li>
                         <li>
-                                <img className="howitworksimg" src="https://assets.taskrabbit.com/v3/assets/static/homepage/how_it_works/step_3-fd7acee425e988dcc42adda5a79423dd.svg"/>
+                            <img className="howitworksimg" src="https://assets.taskrabbit.com/v3/assets/static/homepage/how_it_works/step_3-fd7acee425e988dcc42adda5a79423dd.svg"/>
                             <div className="howitworkstitle">
                                 Get It Done
                             </div>
@@ -109,11 +106,7 @@ class Navbar extends React.Component {
                         </li>
                     </ol>
                 </section>
-                <footer className="footer">
-                    <div className="footericonsdesc">
-                            <div>Follow us! We're friendly: <a href="https://github.com/kudukacar"><i className="fab fa-github-square"></i></a> | <a href="https://www.linkedin.com/in/thomasmanju/"><i className="fab fa-linkedin"></i></a></div>
-                    </div>
-                </footer>
+                <Footer />
             </main>
         </div>
         )

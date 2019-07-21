@@ -1,7 +1,4 @@
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 class TaskDate extends React.Component {
 
@@ -158,18 +155,18 @@ class TaskDate extends React.Component {
                             <div className="datetimeinput">
                                 <div>
                                     <ul><img src={imagesObj[this.props.taskerId]} />{this.taskerName()}</ul>
-                                <h2>{this.header()}</h2>
-                                <label><input type="date" min={this.todaysdate()} value={this.state.date} onChange={this.update('date')} /></label>
-                                <label><input type="time" min="08:00:00" max="16:30:00" value={this.state.time} onChange={this.update('time')} /></label>
-                                <h3>You can chat to adjust task details or change start time after confirming.</h3>
+                                    <h2>{this.header()}</h2>
+                                    <label><input type="date" min={this.todaysdate()} value={this.state.date} onChange={this.update('date')} /></label>
+                                    <label><input type="time" min="08:00:00" max="16:30:00" value={this.state.time} onChange={this.update('time')} /></label>
+                                    <h3>You can chat to adjust task details or change start time after confirming.</h3>
                                 </div>
                             </div>
                             <div className="datetimeinfo">
                                 <div>
-                                <div className="datetimeinfoheader">Request for:</div>
-                                <div>{this.displayDate()} {this.displayTime()}</div>
-                                <h1><button onClick={this.handleClick}>Select &amp; Continue</button></h1>
-                                <h3><i className="far fa-list-alt"></i>Next, confirm your details to get connected with your Tasker.</h3>
+                                    <div className="datetimeinfoheader">Request for:</div>
+                                    <div>{this.displayDate()} {this.displayTime()}</div>
+                                    <h1><button onClick={this.handleClick}>Select &amp; Continue</button></h1>
+                                    <h3><i className="far fa-list-alt"></i>Next, confirm your details to get connected with your Tasker.</h3>
                                 </div>
                             </div>
                         </div>

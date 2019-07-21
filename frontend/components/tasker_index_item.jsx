@@ -1,7 +1,4 @@
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 class TaskerIndexItem extends React.Component {
 
@@ -74,7 +71,7 @@ class TaskerIndexItem extends React.Component {
         return (
             <div className="taskerProfile">
                     <div className="taskerimagesec">
-                    <img src={imagesObj[this.props.tasker.id]} />
+                        <img src={imagesObj[this.props.tasker.id]} />
                         <h1><button onClick={this.handleClick}>Select &amp; Continue</button></h1>
                         <span>You can chat with your Tasker, adjust task details, or change task time after booking.</span>
                     </div>

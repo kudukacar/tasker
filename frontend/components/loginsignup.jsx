@@ -28,19 +28,19 @@ class Loginsignup extends React.Component {
     return (
     <div className="loginsignup">
         <form className="loginsignupform">
-        <h1 className="loginsignupheader">Tasker</h1>
-        <button onClick={this.handleClick}>Demo User</button>
-        <h2>or</h2> 
-        <span>
-            Log in or sign up
-        </span>
-        <div className="loginsignuplist">
-            <Link to={"/login"}><button>Log in</button></Link>
-            <Link to={"/signup"}><button>Sign up</button></Link>
-        </div>
-        <span className="loginsignuptext">
-            By signing up you agree to our Terms of Use and Privacy Policy.
-        </span>
+            <h1 className="loginsignupheader">Tasker</h1>
+            <button onClick={this.handleClick}>Demo User</button>
+            <h2>or</h2> 
+            <span>
+                Log in or sign up
+            </span>
+            <div className="loginsignuplist">
+                <Link to={"/login"}><button>Log in</button></Link>
+                <Link to={"/signup"}><button>Sign up</button></Link>
+            </div>
+            <span className="loginsignuptext">
+                By signing up you agree to our Terms of Use and Privacy Policy.
+            </span>
         </form>
     </div>
     )}

@@ -1,7 +1,4 @@
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 class TaskLocation extends React.Component {
 
@@ -51,10 +48,10 @@ class TaskLocation extends React.Component {
                     <div className="taskinterest">
                         <div>
                         <div>YOUR TASK LOCATION</div>
-                        <input type="text" value={this.state.start_address} onChange={this.update('start_address')} />
-                        <div className="error">{this.error()}</div>
-                        <h1><button onClick={this.handleClick}>Continue</button></h1>
-                    </div>
+                            <input type="text" value={this.state.start_address} onChange={this.update('start_address')} />
+                            <div className="error">{this.error()}</div>
+                            <h1><button onClick={this.handleClick}>Continue</button></h1>
+                        </div>
                     </div>
                 )
         } else {

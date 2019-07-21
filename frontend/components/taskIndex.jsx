@@ -6,6 +6,7 @@ import { getTasks, cancelTask } from '../actions/task_actions';
 import TaskIndexItem from './taskIndexItem';
 import { getCategories } from '../actions/category_actions';
 import { getTaskers } from '../actions/tasker_actions';
+import { Footer } from './footer';
 
 
 const mapStateToProps = (state) => {
@@ -116,77 +117,75 @@ class TaskIndex extends React.Component {
         this.setState({ mode: 'past' });
 
     }
+    header() {
+        return (
+            <header className="mainnav">
+                <nav className="leftnav">
+                    <ul>
+                        <li><Link to='/'>Tasker</Link></li>
+                    </ul>
+                </nav>
+                <nav className="rightnav">
+                    <ul>
+                        <li><Link to='/mytasks'>My Tasks</Link></li>
+                        <li><Link to='/account'>Account</Link></li>
+                    </ul>
+                </nav>
+            </header>
+        )
+    }
+    otherTasks() {
+        return(
+            <section className="taskindexothertasks">
+                <h1>Have something else on your to-do list?</h1>
+                <h2>Book your next task or manage future to-dos with TaskRabbit</h2>
+                <Link to='/'><button>Check It Off Your List</button></Link>
+            </section>
+        )
+    }
+
+    currentPast() {
+        return(
+            <div>
+                <ul>
+                    <li className='taskindexselected' onClick={this.handleCurrentClick}>CURRENT</li>
+                    <li className='taskindexunselected' onClick={this.handlePastClick}>PAST</li>
+                </ul>
+            </div>
+        )
+
+    }
 
     render() {
         if(this.state.mode === 'current') {
             return (
                 <div>
-                    <header className="mainnav">
-                        <nav className="leftnav">
-                            <ul>
-                                <li><Link to='/'>Tasker</Link></li>
-                            </ul>
-                        </nav>
-                        <nav className="rightnav">
-                            <ul>
-                                <li><Link to='/mytasks'>My Tasks</Link></li>
-                                <li><Link to='/account'>Account</Link></li>
-                            </ul>   
-                        </nav>
-                    </header>
+                    {this.header()}
                     <main className="taskindexpage">
                         <section className="taskindex">
-                            <div><ul><li className='taskindexselected' onClick={this.handleCurrentClick}>CURRENT</li><li className='taskindexunselected' onClick={this.handlePastClick}>PAST</li></ul></div>
+                            {this.currentPast()}
                             <ul>
                                 {this.currentTasks()}
                             </ul>
                         </section>
-                        <section className="taskindexothertasks">
-                            <h1>Have something else on your to-do list?</h1>
-                            <h2>Book your next task or manage future to-dos with TaskRabbit</h2>
-                            <Link to='/'><button>Check It Off Your List</button></Link>
-                        </section>
-                        <footer className="footer">
-                            <div className="footericonsdesc">
-                                <div>Follow us! We're friendly: <a href="https://github.com/kudukacar"><i className="fab fa-github-square"></i></a> | <a href="https://www.linkedin.com/in/thomasmanju/"><i className="fab fa-linkedin"></i></a></div>
-                            </div>
-                        </footer>
+                        {this.otherTasks()}
+                        <Footer/>
                     </main>
                 </div>
             )
         } else {
             return (
                 <div>
-                    <header className="mainnav">
-                        <nav className="leftnav">
-                            <ul>
-                                <li><Link to='/'>Tasker</Link></li>
-                            </ul>
-                        </nav>
-                        <nav className="rightnav">
-                            <ul>
-                                <li><Link to='/mytasks'>My Tasks</Link></li>
-                                <li><Link to='/account'>Account</Link></li>
-                            </ul>
-                        </nav>
-                    </header>
+                    {this.header()}
                     <main className="taskindexpage">
                         <section className='taskindex'>
-                            <div><ul><li className='taskindexunselected' onClick={this.handleCurrentClick}>CURRENT</li><li className='taskindexselected' onClick={this.handlePastClick}>PAST</li></ul></div>
+                            {this.currentPast()}
                             <ul>
                                 {this.pastTasks()}
                             </ul>
                         </section>
-                        <section className="taskindexothertasks">
-                            <h1>Have something else on your to-do list?</h1>
-                            <h2>Book your next task or manage future to-dos with TaskRabbit</h2>
-                            <Link to='/'><button>Check It Off Your List</button></Link>
-                        </section>
-                        <footer className="footer">
-                            <div className="footericonsdesc">
-                                <div>Follow us! We're friendly: <a href="https://github.com/kudukacar"><i className="fab fa-github-square"></i></a> | <a href="https://www.linkedin.com/in/thomasmanju/"><i className="fab fa-linkedin"></i></a></div>
-                            </div>
-                        </footer>
+                        {this.otherTasks()}
+                        <Footer />
                     </main>
                 </div>
                 

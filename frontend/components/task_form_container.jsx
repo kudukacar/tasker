@@ -87,7 +87,6 @@ class TaskForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // this.setState({ category_id: this.props.category.id });
         this.props.makeTask(this.state).then(() => this.props.history.push('/mytasks'));
     }
 
@@ -388,11 +387,11 @@ class TaskForm extends React.Component {
                         <div>
                             <div className="confirmheader">
                                 <div>
-                                <h2>{this.props.category.title}</h2>
-                                <h3>{this.tasker()}</h3>
+                                    <h2>{this.props.category.title}</h2>
+                                    <h3>{this.tasker()}</h3>
                                 </div>
-                                <div>
-                                    <img src={imagesObj[this.state.tasker_id]}/>
+                            <div>
+                                <img src={imagesObj[this.state.tasker_id]}/>
                             </div>
                         </div>
                             <div className="confirmtaskinfo">
@@ -405,11 +404,11 @@ class TaskForm extends React.Component {
                                 <div>{this.hourlyRate()}</div>
                             </div>
                             <div className="confirmpolicy">
-                            <span>A 15% Trust and Support Fee is added to the Tasker's total rate</span>
-                            
-                            <p>You will not be charged until your task is complete. Tasks have a one-hour minimum. You can cancel or reschedule anytime.  If you cancel your task within 24 hours of the scheduled start time, you may be charged a one-hour cancellation fee at the Tasker's hourly rate.</p>
-                            
-                            <span>Learn more about our cancellation policy</span>
+                                <span>A 15% Trust and Support Fee is added to the Tasker's total rate</span>
+                                
+                                <p>You will not be charged until your task is complete. Tasks have a one-hour minimum. You can cancel or reschedule anytime.  If you cancel your task within 24 hours of the scheduled start time, you may be charged a one-hour cancellation fee at the Tasker's hourly rate.</p>
+                                
+                                <span>Learn more about our cancellation policy</span>
                             </div>
                         </div>
                     </div>

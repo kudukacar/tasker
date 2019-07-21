@@ -3,7 +3,7 @@ import Navbar from './navbar_container';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import Loginsignup from './loginsignup';
-import {Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Account from './account_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import TaskForm from './task_form_container';
