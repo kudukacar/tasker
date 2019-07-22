@@ -1,3 +1,5 @@
+/* css reset file */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,10 +52,7 @@ table {
     color: #438e29;
 }
 
-/* .homepage{
-    display:flex;
-    flex-direction: column;
-} */
+/* splash page */
 
 .mainnav {
     display: flex;
@@ -91,7 +90,6 @@ table {
     height: 500px;
     background-color: #f9fafb;
     background-image: url(https://i.imgur.com/5SZRejd.jpg);
-    /* background-image: url(https://rooseveltinstitute.org/wp-content/uploads/2019/03/Roosevelt-Institute_2019_Econony-Agenda_Mobile-460x260_c.png); */
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -376,6 +374,8 @@ table {
     cursor: pointer;
 }
 
+/* footer */
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -386,6 +386,22 @@ table {
     color: #B1B9C3;
 }
 
+.fab.fa-github-square {
+    padding: 0px 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.fab.fa-linkedin {
+    padding-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.footericonsdesc > div > a {
+    color: lightgray;
+}
+/* login signup form */
 .loginsignup {
     background-image: url(https://s3-us-west-2.amazonaws.com/com.uppercut.hero-images/assets/0405/comps/405_01941.jpg);
     background-size: cover;
@@ -461,6 +477,7 @@ table {
     font-size: 14px;
 }
 
+/* signup form */
 .signupformtemplate{
     display: flex;
     justify-content: center;
@@ -556,7 +573,7 @@ table {
 .signupform input[type="submit"]:hover {
     background: #438e29;
 }
-
+/* loginform */
 .loginform {
     background: white;
     width: 500px;
@@ -633,7 +650,7 @@ table {
     padding: 0px 15px;
     line-height: 1.5;
 }
-
+/* splash page if logged in */
 .loggedintitle {
     font-size: 32px;
     margin: 0px 0px 16px;
@@ -730,7 +747,7 @@ table {
     font-size: 20px;
     padding: 40px 100px 50px 100px;
 }
-
+/* account page */
 .accountformcontainer {
     height: 740px;
     color:#242A30;
@@ -802,17 +819,7 @@ table {
     height: 20px;
 }
 
-.fab.fa-github-square {
-    padding: 0px 5px;
-    width: 20px;
-    height: 20px;
-}
-
-.fab.fa-linkedin {
-    padding-right: 5px;
-    width: 20px;
-    height: 20px;
-}
+/* task form */
 
 .lowernav {
     border-top: 1px solid lightgray;
@@ -1025,6 +1032,7 @@ table {
     line-height: 1.5;
     border-radius: 5px;
 }
+/* taskers */
 .taskerindex {
     display: flex;
     justify-content: center;
@@ -1190,6 +1198,8 @@ table {
     background-color: #438e29;
     cursor: pointer;
 }
+
+/* calendar page */
 .datetimepage {
     display: flex;
     align-items: center;
@@ -1313,7 +1323,7 @@ table {
 .datetimeinfo > div > div {
     font-size: 24px;
 }
-
+/* confirm and make task */
 .maketask {
     display: flex;
     justify-content: center;
@@ -1441,6 +1451,8 @@ table {
     color: #d14200;
     padding-top: 15px;
 }
+
+/* task index page */
 .taskindexpage{
     border-top: 1px solid lightgray;
     background: #f9fafb;
@@ -1632,6 +1644,3 @@ table {
     -webkit-font-smoothing: antialiased;
 }
 
-.footericonsdesc > div > a {
-    color: lightgray;
-}
