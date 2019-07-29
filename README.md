@@ -124,10 +124,10 @@ end
 ![image](https://user-images.githubusercontent.com/41526816/62057912-80a2da80-b1ee-11e9-94ef-b3c15ef560b2.png)
 
 #### Code Snippet: AJAX request
-Canceling a task requires an AJAX request to the backend to delete the task from the database.  
+Canceling a task requires an AJAX request to the backend to delete the task from the database, and an action to reflect the change in the state.  
 
 ```javascript
-// action to remove task from database and from Redux store
+// action to remove task from database and from state
 export const cancelTask = (id) => dispatch => {
     return deleteTask(id).then(task => dispatch(removeTask(task.id)));
 }
