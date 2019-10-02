@@ -9,7 +9,6 @@ class TaskDetail extends React.Component {
             error: false,
         }
         this.handleClick = this.handleClick.bind(this);
-        this.update = this.update.bind(this);
     }
 
     update(field) {

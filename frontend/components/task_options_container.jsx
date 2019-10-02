@@ -11,7 +11,6 @@ class TaskOptions extends React.Component {
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleReClick = this.handleReClick.bind(this);
-        this.update = this.update.bind(this);
     }
 
     update(field) {

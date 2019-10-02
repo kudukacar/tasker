@@ -24,8 +24,6 @@ class Login extends React.Component {
             password: "",
         }
         this.handleSubmit=this.handleSubmit.bind(this);
-        this.errors = this.errors.bind(this);
-        this.update = this.update.bind(this);
     }
     handleSubmit(e) {
         e.preventDefault();

@@ -9,7 +9,6 @@ class TaskDate extends React.Component {
             time: "08:00",
         }
         this.handleClick = this.handleClick.bind(this);
-        this.update = this.update.bind(this);
     }
 
     update(field) {
