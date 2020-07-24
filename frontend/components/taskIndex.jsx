@@ -145,14 +145,28 @@ class TaskIndex extends React.Component {
     }
 
     currentPast() {
-        return(
-            <div>
-                <ul>
-                    <li className='taskindexselected' onClick={this.handleCurrentClick}>CURRENT</li>
-                    <li className='taskindexunselected' onClick={this.handlePastClick}>PAST</li>
-                </ul>
-            </div>
-        )
+        return (
+          <div>
+            <ul>
+              <li
+                className={
+                  this.state.mode === "current"
+                    ? "taskindexselected"
+                    : "taskindexunselected"
+                }
+                onClick={this.handleCurrentClick}
+              >
+                CURRENT
+              </li>
+              <li
+                className={this.state.mode === "past" ? "taskindexselected" : "taskindexunselected"}
+                onClick={this.handlePastClick}
+              >
+                PAST
+              </li>
+            </ul>
+          </div>
+        );
 
     }
 

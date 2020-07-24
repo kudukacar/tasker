@@ -52,64 +52,71 @@ class Navbar extends React.Component {
         )
     } else {
         return (
-        <div>
+          <div>
             <header className="mainnav">
-                <nav className="leftnav">
-                    <ul>
-                        <li><Link to='/'>Tasker</Link></li>
-                    </ul>
-                </nav>
-                <nav className="rightnav">
-                    <ul>
-                        <li><Link to='/loginsignup'> Log in </Link></li>
-                    </ul>
-                </nav>
+              <nav className="leftnav">
+                <ul>
+                  <li>
+                    <Link to="/">Tasker</Link>
+                  </li>
+                </ul>
+              </nav>
+              <nav className="rightnav">
+                <ul>
+                  <li>
+                    <Link to="/loginsignup"> Log in </Link>
+                  </li>
+                </ul>
+              </nav>
             </header>
             <main>
-                <section className="titleimage">
-                        <div className="title">The convenient &amp; affordable way
-                        <br/> 
-                        to get things done around the home</div>
-                        <div className="subtitle">Choose from over 140,000 background checked Taskers for help without breaking the bank.</div>
-                        <NotLoggedInCats />
-                </section>
-                <GetInspired />
-                <section className="howitworks">
-                    <div>How It Works</div>
-                    <ol className="howitworkslist">
-                        <li>
-                            <img className = "howitworksimg" src="https://assets.taskrabbit.com/v3/assets/static/homepage/how_it_works/step_1-59268ae9c0bf23d365715d3d974a0947.svg"/>
-                            <div className="howitworkstitle">
-                                Describe Your Task
-                            </div>
-                            <div className="howitworksdesc">
-                                Tell us what you need done when and where it works for you.
-                            </div>
-                        </li>
-                        <li>
-                            <img className="howitworksimg" src="https://assets.taskrabbit.com/v3/assets/static/homepage/how_it_works/step_2-13d469cb04809cde3793a6bf2f6e8005.svg"/>
-                            <div className="howitworkstitle">
-                                Choose Your Tasker
-                            </div>
-                            <div className="howitworksdesc">
-                                Browse trusted Taskers by skills, reviews, and price. Select the right person for the job and chat to confirm details.
-                            </div>
-                        </li>
-                        <li>
-                            <img className="howitworksimg" src="https://assets.taskrabbit.com/v3/assets/static/homepage/how_it_works/step_3-fd7acee425e988dcc42adda5a79423dd.svg"/>
-                            <div className="howitworkstitle">
-                                Get It Done
-                            </div>
-                            <div className="howitworksdesc">
-                                Your tasker arrives and gets the job done. Pay securely and leave a review, all through TaskRabbit.
-                            </div>
-                        </li>
-                    </ol>
-                </section>
-                <Footer />
+              <section className="titleimage">
+                <div className="title">
+                  The convenient &amp; affordable way
+                  <br />
+                  to get things done around the home
+                </div>
+                <div className="subtitle">
+                  Choose from over 140,000 background checked Taskers for help
+                  without breaking the bank.
+                </div>
+                <NotLoggedInCats />
+              </section>
+              <GetInspired />
+              <section className="howitworks">
+                <div>How It Works</div>
+                <ol className="howitworkslist">
+                  <li>
+                    <i class="fas fa-hand-pointer fa-5x"></i>
+                    <div className="howitworkstitle">Describe Your Task</div>
+                    <div className="howitworksdesc">
+                      Tell us what you need done when and where it works for
+                      you.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fas fa-portrait fa-5x"></i>
+                    <div className="howitworkstitle">Choose Your Tasker</div>
+                    <div className="howitworksdesc">
+                      Browse trusted Taskers by skills, reviews, and price.
+                      Select the right person for the job and chat to confirm
+                      details.
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fas fa-clipboard fa-5x"></i>
+                    <div className="howitworkstitle">Get It Done</div>
+                    <div className="howitworksdesc">
+                      Your tasker arrives and gets the job done. Pay securely
+                      and leave a review, all through TaskRabbit.
+                    </div>
+                  </li>
+                </ol>
+              </section>
+              <Footer />
             </main>
-        </div>
-        )
+          </div>
+        );
     }
     }
 
